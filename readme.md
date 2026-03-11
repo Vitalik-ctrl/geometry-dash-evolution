@@ -29,7 +29,7 @@ The solution is architected into a modular Python framework separating the optim
 ### 1. Genetic Algorithm (GA)
 The solution uses a standard Genetic Algorithm adapted for continuous optimization problems.
 * **Encoding:** Real-valued vector of length $N=160$. This represents 80 sequential actions, where each action is a pair: `[Time_Start, Duration]`.
-* **Objective:** Maximize Distance ($f(x) = \text{pixels_traveled}$).
+* **Objective:** Maximize Distance $f(x) = \text{pixels-traveled}$.
 * **Selection:** **Tournament Selection**. This method was chosen to maintain selection pressure and prevent the population from being dominated by a single "lucky" individual too early.
 * **Crossover:** **Simulated Binary Crossover (SBX)**.
     * *Probability:* $0.9$.
@@ -148,17 +148,17 @@ The best solution was found around 140 generations, after which the population c
 Below are visualizations of the best individual's performance. Second is important to notice how time 
 increases in each generation, indicating that the agent is learning to survive longer in the level.
 <p style="display:flex; gap:1rem; align-items:flex-start;">
-  <img src="plots/plot_2025-12-31%2002-33-17_2.png" alt="" width="33%" />
-  <img src="plots/plot_2025-12-31%2002-33-17_3.png" alt="" width="24.8%" />
-<img src="plots/plot_2025-12-31%2002-33-17_4.png" alt="" width="33%" />
+  <img src="plots/plot_2025-12-31_02-33-17_2.png" alt="" width="33%" />
+  <img src="plots/plot_2025-12-31_02-33-17_3.png" alt="" width="24.8%" />
+<img src="plots/plot_2025-12-31_02-33-17_4.png" alt="" width="33%" />
 </p>
 
 Important generations to notise is 17, 40, 75, 103. These are where diversity spikes due to new strategies being found. 
 After this the population converges again until the next breakthrough.
 <p style="display:flex; gap:1rem; align-items:flex-start;">
-  <img src="plots/plot_2025-12-31%2002-33-17_5.png" alt="" width="33%" />
-  <img src="plots/plot_2025-12-31%2002-33-17_6.png" alt="" width="24.8%" />
-<img src="plots/plot_2025-12-31%2002-33-17_7.png" alt="" width="33%" />
+  <img src="plots/plot_2025-12-31_02-33-17_5.png" alt="" width="33%" />
+  <img src="plots/plot_2025-12-31_02-33-17_6.png" alt="" width="24.8%" />
+<img src="plots/plot_2025-12-31_02-33-17_7.png" alt="" width="33%" />
 </p>
 
 You can run these solutions and visually see where was the moment of breakthrough in the level. During analysis I noticed 
@@ -168,9 +168,9 @@ the agent now can use same mechanics to solve multiple different parts of the le
 sections and thrusting for ship sections just by evolutionary pressure.
 
 <p style="display:flex; gap:1rem; align-items:flex-start;">
-  <img src="plots/plot_2025-12-31%2002-33-17_8.png" alt="" width="33%" />
-  <img src="plots/plot_2025-12-31%2002-33-17_9.png" alt="" width="24.8%" />
-<img src="plots/plot_2025-12-31%2002-33-17_10.png" alt="" width="33%" />
+  <img src="plots/plot_2025-12-31_02-33-17_8.png" alt="" width="33%" />
+  <img src="plots/plot_2025-12-31_02-33-17_9.png" alt="" width="24.8%" />
+<img src="plots/plot_2025-12-31_02-33-17_10.png" alt="" width="33%" />
 </p>
 
 ### E. Local Search vs. Pure GA
@@ -178,9 +178,9 @@ I have tested the performance of GA against Local Search (Hill Climbing) and Mem
 * **Hill Climbing:** Failed to progress beyond 2,500px. The local search was unable to escape local optima due to the deceptive fitness landscape.
 
 <p style="display:flex; gap:1rem; align-items:flex-start;">
-  <img src="plots/plot_2026-01-04 16-57-45_0.png" alt="" width="33%" />
-  <img src="plots/plot_2026-01-04 16-57-45_1.png" alt="" width="24.8%" />
-<img src="plots/plot_2026-01-04 16-57-45_2.png" alt="" width="33%" />
+  <img src="plots/plot_2026-01-04_16-57-45_0.png" alt="" width="33%" />
+  <img src="plots/plot_2026-01-04_16-57-45_1.png" alt="" width="24.8%" />
+<img src="plots/plot_2026-01-04_16-57-45_2.png" alt="" width="33%" />
 </p>
 
 * **Memetic Algorithm:** Showed a little improvement over pure GA, reaching 21,500px in 140 generations. However, the added computational overhead 
