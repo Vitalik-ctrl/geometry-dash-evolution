@@ -1,0 +1,3854 @@
+╔==============================================================================╗
+║                    GEOMETRY DASH - GENETIC ALGORITHM                         ║
+╚==============================================================================╝
+
+ ALGORITHM CONFIGURATION:
+────────────────────────────────────────────────────────────────────────────────
+  Algorithm Type:              Genetic Algorithm (GA)
+  Optimization Type:           Single-Objective (Maximize Distance)
+  Population Size:             450
+  Number of Generations:       150
+  Total Evaluations:           67,500
+  Selection:                   Tournament Selection
+  Elitism:                     Yes (best solutions preserved)
+  Duplicate Elimination:       Enabled
+────────────────────────────────────────────────────────────────────────────────
+
+ GENOME REPRESENTATION:
+────────────────────────────────────────────────────────────────────────────────
+  Genome Length:               160 genes
+  Encoding:                    Real-valued (continuous)
+  Gene Pairs:                  80 (time, duration) pairs
+  Time Range:                  0.0 - 40.0s
+  Duration Range:              0.01 - 1.5s
+  Search Space Dimensionality: 160D
+  Theoretical Search Space:    ~Infinite (continuous)
+────────────────────────────────────────────────────────────────────────────────
+
+ GENETIC OPERATORS:
+────────────────────────────────────────────────────────────────────────────────
+  Crossover:
+    Type:                      Simulated Binary Crossover (SBX)
+    Probability:               0.9 (90%)
+    Distribution Index (eta):  15
+    Effect:                    Combines parent solutions
+
+  Mutation:
+    Type:                      Polynomial Mutation (PM)
+    Probability per gene:      0.012500
+    Distribution Index (eta):  10
+    Effect:                    Small random changes to genes
+
+  Sampling (Initial Pop):
+    Type:                      Random Float Sampling
+    Distribution:              Uniform across bounds
+────────────────────────────────────────────────────────────────────────────────
+
+ OPTIMIZATION OBJECTIVE:
+────────────────────────────────────────────────────────────────────────────────
+  Primary Goal:                Maximize distance traveled
+  Level Length:                ~12,400 pixels
+  Success Criterion:           Reach victory platform (11,000+ px)
+  Fitness Function:            f(x) = distance_traveled(x)
+  Constraint Handling:         Death = immediate fitness evaluation
+────────────────────────────────────────────────────────────────────────────────
+
+️  COMPUTATIONAL DETAILS:
+────────────────────────────────────────────────────────────────────────────────
+  Python Version:              3.13.3
+  Simulation Timestep:         1/60s (60 FPS)
+  Max Simulation Time:         40.0s
+  Physics Engine:              Custom 2D platformer
+  Collision Detection:         AABB (Axis-Aligned Bounding Box)
+────────────────────────────────────────────────────────────────────────────────
+
+ STARTING OPTIMIZATION...
+================================================================================
+
+=================================================
+n_gen  |  n_eval  |     f_avg     |     f_min
+=================================================
+     1 |      450 | -9.301315E+02 | -2.823333E+03
+     2 |      900 | -1.262250E+03 | -3.776667E+03
+
+================================================================================
+GENERATION 2 COMPLETE
+================================================================================
+  Best Distance:            3776.67 pixels
+  Average Distance:         1262.25 pixels
+  Median Distance:          1274.17 pixels
+  Min Distance:              834.17 pixels
+  Standard Deviation:        370.00
+  Population Range:         2942.50 pixels
+  Improvement:              +953.33 pixels
+  Improvement %:             +33.77%
+  Stagnation Count:               0
+  Generation Time:             0.56s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            30.5%
+  Cumulative Time:             0.56s (0m 0s)
+  Total Improvement:         953.33 pixels
+  Avg Improvement/Gen:       476.67 pixels
+================================================================================
+     3 |     1350 | -1.555767E+03 | -4.180000E+03
+
+================================================================================
+GENERATION 3 COMPLETE
+================================================================================
+  Best Distance:            4180.00 pixels
+  Average Distance:         1555.77 pixels
+  Median Distance:          1576.67 pixels
+  Min Distance:             1228.33 pixels
+  Standard Deviation:        289.47
+  Population Range:         2951.67 pixels
+  Improvement:              +403.33 pixels
+  Improvement %:             +10.68%
+  Stagnation Count:               0
+  Generation Time:             0.61s
+  Average Gen Time:            0.58s
+  Time vs Avg:                +0.03s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            33.7%
+  Cumulative Time:             1.16s (0m 1s)
+  Total Improvement:        1356.67 pixels
+  Avg Improvement/Gen:       452.22 pixels
+================================================================================
+     4 |     1800 | -1.697748E+03 | -4.180000E+03
+
+================================================================================
+GENERATION 4 COMPLETE
+================================================================================
+  Best Distance:            4180.00 pixels
+  Average Distance:         1697.75 pixels
+  Median Distance:          1576.67 pixels
+  Min Distance:             1576.67 pixels
+  Standard Deviation:        258.56
+  Population Range:         2603.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             0.65s
+  Average Gen Time:            0.60s
+  Time vs Avg:                +0.04s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            33.7%
+  Cumulative Time:             1.81s (0m 1s)
+  Total Improvement:        1356.67 pixels
+  Avg Improvement/Gen:       339.17 pixels
+================================================================================
+     5 |     2250 | -1.761833E+03 | -4.180000E+03
+
+================================================================================
+GENERATION 5 COMPLETE
+================================================================================
+  Best Distance:            4180.00 pixels
+  Average Distance:         1761.83 pixels
+  Median Distance:          1824.17 pixels
+  Min Distance:             1576.67 pixels
+  Standard Deviation:        272.30
+  Population Range:         2603.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             0.68s
+  Average Gen Time:            0.62s
+  Time vs Avg:                +0.05s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            33.7%
+  Cumulative Time:             2.49s (0m 2s)
+  Total Improvement:        1356.67 pixels
+  Avg Improvement/Gen:       271.33 pixels
+================================================================================
+     6 |     2700 | -1.851137E+03 | -4.180000E+03
+
+================================================================================
+GENERATION 6 COMPLETE
+================================================================================
+  Best Distance:            4180.00 pixels
+  Average Distance:         1851.14 pixels
+  Median Distance:          1851.67 pixels
+  Min Distance:             1576.67 pixels
+  Standard Deviation:        262.94
+  Population Range:         2603.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             0.71s
+  Average Gen Time:            0.64s
+  Time vs Avg:                +0.07s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            33.7%
+  Cumulative Time:             3.20s (0m 3s)
+  Total Improvement:        1356.67 pixels
+  Avg Improvement/Gen:       226.11 pixels
+  Est. Remaining Time:   1m 32s
+================================================================================
+     7 |     3150 | -1.922107E+03 | -4.180000E+03
+
+================================================================================
+GENERATION 7 COMPLETE
+================================================================================
+  Best Distance:            4180.00 pixels
+  Average Distance:         1922.11 pixels
+  Median Distance:          1870.00 pixels
+  Min Distance:             1824.17 pixels
+  Standard Deviation:        274.51
+  Population Range:         2355.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             0.70s
+  Average Gen Time:            0.65s
+  Time vs Avg:                +0.05s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            33.7%
+  Cumulative Time:             3.90s (0m 3s)
+  Total Improvement:        1356.67 pixels
+  Avg Improvement/Gen:       193.81 pixels
+  Est. Remaining Time:   1m 32s
+================================================================================
+     8 |     3600 | -1.945004E+03 | -4.180000E+03
+
+================================================================================
+GENERATION 8 COMPLETE
+================================================================================
+  Best Distance:            4180.00 pixels
+  Average Distance:         1945.00 pixels
+  Median Distance:          1870.00 pixels
+  Min Distance:             1851.67 pixels
+  Standard Deviation:        313.61
+  Population Range:         2328.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               5
+  Generation Time:             0.71s
+  Average Gen Time:            0.66s
+  Time vs Avg:                +0.05s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            33.7%
+  Cumulative Time:             4.61s (0m 4s)
+  Total Improvement:        1356.67 pixels
+  Avg Improvement/Gen:       169.58 pixels
+  Est. Remaining Time:   1m 33s
+================================================================================
+     9 |     4050 | -1.962624E+03 | -4.180000E+03
+
+================================================================================
+GENERATION 9 COMPLETE
+================================================================================
+  Best Distance:            4180.00 pixels
+  Average Distance:         1962.62 pixels
+  Median Distance:          1879.17 pixels
+  Min Distance:             1870.00 pixels
+  Standard Deviation:        338.17
+  Population Range:         2310.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               6
+  Generation Time:             0.71s
+  Average Gen Time:            0.66s
+  Time vs Avg:                +0.04s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            33.7%
+  Cumulative Time:             5.31s (0m 5s)
+  Total Improvement:        1356.67 pixels
+  Avg Improvement/Gen:       150.74 pixels
+  Est. Remaining Time:   1m 33s
+================================================================================
+    10 |     4500 | -1.979104E+03 | -4.180000E+03
+
+================================================================================
+GENERATION 10 COMPLETE
+================================================================================
+  Best Distance:            4180.00 pixels
+  Average Distance:         1979.10 pixels
+  Median Distance:          1879.17 pixels
+  Min Distance:             1870.00 pixels
+  Standard Deviation:        360.15
+  Population Range:         2310.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               7
+  Generation Time:             0.72s
+  Average Gen Time:            0.67s
+  Time vs Avg:                +0.05s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            33.7%
+  Cumulative Time:             6.03s (0m 6s)
+  Total Improvement:        1356.67 pixels
+  Avg Improvement/Gen:       135.67 pixels
+  Est. Remaining Time:   1m 33s
+================================================================================
+    11 |     4950 | -2.005789E+03 | -4.180000E+03
+
+================================================================================
+GENERATION 11 COMPLETE
+================================================================================
+  Best Distance:            4180.00 pixels
+  Average Distance:         2005.79 pixels
+  Median Distance:          1879.17 pixels
+  Min Distance:             1879.17 pixels
+  Standard Deviation:        388.09
+  Population Range:         2300.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               8
+  Generation Time:             0.70s
+  Average Gen Time:            0.67s
+  Time vs Avg:                +0.03s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            33.7%
+  Cumulative Time:             6.73s (0m 6s)
+  Total Improvement:        1356.67 pixels
+  Avg Improvement/Gen:       123.33 pixels
+  Est. Remaining Time:   1m 33s
+================================================================================
+    12 |     5400 | -2.057652E+03 | -4.180000E+03
+
+================================================================================
+GENERATION 12 COMPLETE
+================================================================================
+  Best Distance:            4180.00 pixels
+  Average Distance:         2057.65 pixels
+  Median Distance:          1879.17 pixels
+  Min Distance:             1879.17 pixels
+  Standard Deviation:        469.24
+  Population Range:         2300.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               9
+  Generation Time:             0.73s
+  Average Gen Time:            0.68s
+  Time vs Avg:                +0.05s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            33.7%
+  Cumulative Time:             7.46s (0m 7s)
+  Total Improvement:        1356.67 pixels
+  Avg Improvement/Gen:       113.06 pixels
+  Est. Remaining Time:   1m 33s
+================================================================================
+    13 |     5850 | -2.127970E+03 | -4.198333E+03
+
+================================================================================
+GENERATION 13 COMPLETE
+================================================================================
+  Best Distance:            4198.33 pixels
+  Average Distance:         2127.97 pixels
+  Median Distance:          1879.17 pixels
+  Min Distance:             1879.17 pixels
+  Standard Deviation:        549.80
+  Population Range:         2319.17 pixels
+  Improvement:               +18.33 pixels
+  Improvement %:              +0.44%
+  Stagnation Count:               0
+  Generation Time:             0.77s
+  Average Gen Time:            0.69s
+  Time vs Avg:                +0.08s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            33.9%
+  Cumulative Time:             8.22s (0m 8s)
+  Total Improvement:        1375.00 pixels
+  Avg Improvement/Gen:       105.77 pixels
+  Est. Remaining Time:   1m 33s
+================================================================================
+    14 |     6300 | -2.177919E+03 | -4.198333E+03
+
+================================================================================
+GENERATION 14 COMPLETE
+================================================================================
+  Best Distance:            4198.33 pixels
+  Average Distance:         2177.92 pixels
+  Median Distance:          1879.17 pixels
+  Min Distance:             1879.17 pixels
+  Standard Deviation:        584.72
+  Population Range:         2319.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             0.82s
+  Average Gen Time:            0.70s
+  Time vs Avg:                +0.13s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            33.9%
+  Cumulative Time:             9.05s (0m 9s)
+  Total Improvement:        1375.00 pixels
+  Avg Improvement/Gen:        98.21 pixels
+  Est. Remaining Time:   1m 34s
+================================================================================
+    15 |     6750 | -2.289670E+03 | -4.198333E+03
+
+================================================================================
+GENERATION 15 COMPLETE
+================================================================================
+  Best Distance:            4198.33 pixels
+  Average Distance:         2289.67 pixels
+  Median Distance:          1879.17 pixels
+  Min Distance:             1879.17 pixels
+  Standard Deviation:        659.07
+  Population Range:         2319.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             0.79s
+  Average Gen Time:            0.70s
+  Time vs Avg:                +0.09s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            33.9%
+  Cumulative Time:             9.84s (0m 9s)
+  Total Improvement:        1375.00 pixels
+  Avg Improvement/Gen:        91.67 pixels
+  Est. Remaining Time:   1m 34s
+================================================================================
+    16 |     7200 | -2.421467E+03 | -4.198333E+03
+
+================================================================================
+GENERATION 16 COMPLETE
+================================================================================
+  Best Distance:            4198.33 pixels
+  Average Distance:         2421.47 pixels
+  Median Distance:          2172.50 pixels
+  Min Distance:             1879.17 pixels
+  Standard Deviation:        719.19
+  Population Range:         2319.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             0.72s
+  Average Gen Time:            0.70s
+  Time vs Avg:                +0.01s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            33.9%
+  Cumulative Time:            10.55s (0m 10s)
+  Total Improvement:        1375.00 pixels
+  Avg Improvement/Gen:        85.94 pixels
+  Est. Remaining Time:   1m 34s
+================================================================================
+    17 |     7650 | -2.624457E+03 | -4.216667E+03
+
+================================================================================
+GENERATION 17 COMPLETE
+================================================================================
+  Best Distance:            4216.67 pixels
+  Average Distance:         2624.46 pixels
+  Median Distance:          2172.50 pixels
+  Min Distance:             1879.17 pixels
+  Standard Deviation:        755.01
+  Population Range:         2337.50 pixels
+  Improvement:               +18.33 pixels
+  Improvement %:              +0.44%
+  Stagnation Count:               0
+  Generation Time:             0.87s
+  Average Gen Time:            0.71s
+  Time vs Avg:                +0.16s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            34.0%
+  Cumulative Time:            11.42s (0m 11s)
+  Total Improvement:        1393.33 pixels
+  Avg Improvement/Gen:        81.96 pixels
+  Est. Remaining Time:   1m 34s
+================================================================================
+    18 |     8100 | -2.957717E+03 | -4.216667E+03
+
+================================================================================
+GENERATION 18 COMPLETE
+================================================================================
+  Best Distance:            4216.67 pixels
+  Average Distance:         2957.72 pixels
+  Median Distance:          2823.33 pixels
+  Min Distance:             1879.17 pixels
+  Standard Deviation:        697.95
+  Population Range:         2337.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             0.94s
+  Average Gen Time:            0.73s
+  Time vs Avg:                +0.22s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            34.0%
+  Cumulative Time:            12.37s (0m 12s)
+  Total Improvement:        1393.33 pixels
+  Avg Improvement/Gen:        77.41 pixels
+  Est. Remaining Time:   1m 36s
+================================================================================
+    19 |     8550 | -3.251213E+03 | -4.620000E+03
+
+================================================================================
+GENERATION 19 COMPLETE
+================================================================================
+  Best Distance:            4620.00 pixels
+  Average Distance:         3251.21 pixels
+  Median Distance:          2988.33 pixels
+  Min Distance:             2172.50 pixels
+  Standard Deviation:        582.60
+  Population Range:         2447.50 pixels
+  Improvement:              +403.33 pixels
+  Improvement %:              +9.57%
+  Stagnation Count:               0
+  Generation Time:             0.96s
+  Average Gen Time:            0.74s
+  Time vs Avg:                +0.22s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            37.3%
+  Cumulative Time:            13.33s (0m 13s)
+  Total Improvement:        1796.67 pixels
+  Avg Improvement/Gen:        94.56 pixels
+  Est. Remaining Time:   1m 37s
+================================================================================
+    20 |     9000 | -3.517759E+03 | -4.620000E+03
+
+================================================================================
+GENERATION 20 COMPLETE
+================================================================================
+  Best Distance:            4620.00 pixels
+  Average Distance:         3517.76 pixels
+  Median Distance:          3776.67 pixels
+  Min Distance:             2823.33 pixels
+  Standard Deviation:        438.38
+  Population Range:         1796.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             1.15s
+  Average Gen Time:            0.76s
+  Time vs Avg:                +0.38s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            37.3%
+  Cumulative Time:            14.48s (0m 14s)
+  Total Improvement:        1796.67 pixels
+  Avg Improvement/Gen:        89.83 pixels
+  Est. Remaining Time:   1m 39s
+================================================================================
+    21 |     9450 | -3.722991E+03 | -4.620000E+03
+
+================================================================================
+GENERATION 21 COMPLETE
+================================================================================
+  Best Distance:            4620.00 pixels
+  Average Distance:         3722.99 pixels
+  Median Distance:          3776.67 pixels
+  Min Distance:             2988.33 pixels
+  Standard Deviation:        290.90
+  Population Range:         1631.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             0.98s
+  Average Gen Time:            0.77s
+  Time vs Avg:                +0.21s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            37.3%
+  Cumulative Time:            15.46s (0m 15s)
+  Total Improvement:        1796.67 pixels
+  Avg Improvement/Gen:        85.56 pixels
+  Est. Remaining Time:   1m 39s
+================================================================================
+    22 |     9900 | -3.836820E+03 | -4.620000E+03
+
+================================================================================
+GENERATION 22 COMPLETE
+================================================================================
+  Best Distance:            4620.00 pixels
+  Average Distance:         3836.82 pixels
+  Median Distance:          3776.67 pixels
+  Min Distance:             3776.67 pixels
+  Standard Deviation:        125.13
+  Population Range:          843.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             1.11s
+  Average Gen Time:            0.79s
+  Time vs Avg:                +0.32s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            37.3%
+  Cumulative Time:            16.57s (0m 16s)
+  Total Improvement:        1796.67 pixels
+  Avg Improvement/Gen:        81.67 pixels
+  Est. Remaining Time:   1m 41s
+================================================================================
+    23 |    10350 | -3.862222E+03 | -4.620000E+03
+
+================================================================================
+GENERATION 23 COMPLETE
+================================================================================
+  Best Distance:            4620.00 pixels
+  Average Distance:         3862.22 pixels
+  Median Distance:          3776.67 pixels
+  Min Distance:             3776.67 pixels
+  Standard Deviation:        143.31
+  Population Range:          843.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             1.24s
+  Average Gen Time:            0.81s
+  Time vs Avg:                +0.43s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            37.3%
+  Cumulative Time:            17.81s (0m 17s)
+  Total Improvement:        1796.67 pixels
+  Avg Improvement/Gen:        78.12 pixels
+  Est. Remaining Time:   1m 42s
+================================================================================
+    24 |    10800 | -3.890170E+03 | -4.620000E+03
+
+================================================================================
+GENERATION 24 COMPLETE
+================================================================================
+  Best Distance:            4620.00 pixels
+  Average Distance:         3890.17 pixels
+  Median Distance:          3776.67 pixels
+  Min Distance:             3776.67 pixels
+  Standard Deviation:        152.79
+  Population Range:          843.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               5
+  Generation Time:             1.12s
+  Average Gen Time:            0.82s
+  Time vs Avg:                +0.29s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            37.3%
+  Cumulative Time:            18.92s (0m 18s)
+  Total Improvement:        1796.67 pixels
+  Avg Improvement/Gen:        74.86 pixels
+  Est. Remaining Time:   1m 43s
+================================================================================
+    25 |    11250 | -3.920767E+03 | -4.620000E+03
+
+================================================================================
+GENERATION 25 COMPLETE
+================================================================================
+  Best Distance:            4620.00 pixels
+  Average Distance:         3920.77 pixels
+  Median Distance:          3840.83 pixels
+  Min Distance:             3776.67 pixels
+  Standard Deviation:        158.99
+  Population Range:          843.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               6
+  Generation Time:             1.32s
+  Average Gen Time:            0.84s
+  Time vs Avg:                +0.48s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            37.3%
+  Cumulative Time:            20.25s (0m 20s)
+  Total Improvement:        1796.67 pixels
+  Avg Improvement/Gen:        71.87 pixels
+  Est. Remaining Time:   1m 45s
+================================================================================
+    26 |    11700 | -3.951057E+03 | -4.620000E+03
+
+================================================================================
+GENERATION 26 COMPLETE
+================================================================================
+  Best Distance:            4620.00 pixels
+  Average Distance:         3951.06 pixels
+  Median Distance:          4024.17 pixels
+  Min Distance:             3776.67 pixels
+  Standard Deviation:        158.41
+  Population Range:          843.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               7
+  Generation Time:             1.03s
+  Average Gen Time:            0.85s
+  Time vs Avg:                +0.18s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            37.3%
+  Cumulative Time:            21.28s (0m 21s)
+  Total Improvement:        1796.67 pixels
+  Avg Improvement/Gen:        69.10 pixels
+  Est. Remaining Time:   1m 45s
+================================================================================
+    27 |    12150 | -3.996056E+03 | -4.620000E+03
+
+================================================================================
+GENERATION 27 COMPLETE
+================================================================================
+  Best Distance:            4620.00 pixels
+  Average Distance:         3996.06 pixels
+  Median Distance:          4024.17 pixels
+  Min Distance:             3776.67 pixels
+  Standard Deviation:        148.07
+  Population Range:          843.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               8
+  Generation Time:             1.18s
+  Average Gen Time:            0.86s
+  Time vs Avg:                +0.32s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            37.3%
+  Cumulative Time:            22.46s (0m 22s)
+  Total Improvement:        1796.67 pixels
+  Avg Improvement/Gen:        66.54 pixels
+  Est. Remaining Time:   1m 46s
+================================================================================
+    28 |    12600 | -4.052828E+03 | -4.620000E+03
+
+================================================================================
+GENERATION 28 COMPLETE
+================================================================================
+  Best Distance:            4620.00 pixels
+  Average Distance:         4052.83 pixels
+  Median Distance:          4024.17 pixels
+  Min Distance:             3822.50 pixels
+  Standard Deviation:        119.39
+  Population Range:          797.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               9
+  Generation Time:             1.23s
+  Average Gen Time:            0.88s
+  Time vs Avg:                +0.35s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            37.3%
+  Cumulative Time:            23.68s (0m 23s)
+  Total Improvement:        1796.67 pixels
+  Avg Improvement/Gen:        64.17 pixels
+  Est. Remaining Time:   1m 47s
+================================================================================
+    29 |    13050 | -4.095911E+03 | -4.620000E+03
+
+================================================================================
+GENERATION 29 COMPLETE
+================================================================================
+  Best Distance:            4620.00 pixels
+  Average Distance:         4095.91 pixels
+  Median Distance:          4042.50 pixels
+  Min Distance:             4024.17 pixels
+  Standard Deviation:         93.72
+  Population Range:          595.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              10
+  Generation Time:             1.14s
+  Average Gen Time:            0.89s
+  Time vs Avg:                +0.25s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            37.3%
+  Cumulative Time:            24.82s (0m 24s)
+  Total Improvement:        1796.67 pixels
+  Avg Improvement/Gen:        61.95 pixels
+  Est. Remaining Time:   1m 47s
+================================================================================
+    30 |    13500 | -4.113919E+03 | -4.620000E+03
+
+================================================================================
+GENERATION 30 COMPLETE
+================================================================================
+  Best Distance:            4620.00 pixels
+  Average Distance:         4113.92 pixels
+  Median Distance:          4097.50 pixels
+  Min Distance:             4024.17 pixels
+  Standard Deviation:         95.04
+  Population Range:          595.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              11
+  Generation Time:             1.35s
+  Average Gen Time:            0.90s
+  Time vs Avg:                +0.44s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            37.3%
+  Cumulative Time:            26.17s (0m 26s)
+  Total Improvement:        1796.67 pixels
+  Avg Improvement/Gen:        59.89 pixels
+  Est. Remaining Time:   1m 48s
+================================================================================
+    31 |    13950 | -4.137161E+03 | -5.023333E+03
+
+================================================================================
+GENERATION 31 COMPLETE
+================================================================================
+  Best Distance:            5023.33 pixels
+  Average Distance:         4137.16 pixels
+  Median Distance:          4134.17 pixels
+  Min Distance:             4024.17 pixels
+  Standard Deviation:         98.80
+  Population Range:          999.17 pixels
+  Improvement:              +403.33 pixels
+  Improvement %:              +8.73%
+  Stagnation Count:               0
+  Generation Time:             1.42s
+  Average Gen Time:            0.92s
+  Time vs Avg:                +0.50s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            40.5%
+  Cumulative Time:            27.59s (0m 27s)
+  Total Improvement:        2200.00 pixels
+  Avg Improvement/Gen:        70.97 pixels
+  Est. Remaining Time:   1m 49s
+================================================================================
+    32 |    14400 | -4.158448E+03 | -5.023333E+03
+
+================================================================================
+GENERATION 32 COMPLETE
+================================================================================
+  Best Distance:            5023.33 pixels
+  Average Distance:         4158.45 pixels
+  Median Distance:          4152.50 pixels
+  Min Distance:             4024.17 pixels
+  Standard Deviation:         90.14
+  Population Range:          999.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             1.44s
+  Average Gen Time:            0.94s
+  Time vs Avg:                +0.50s
+  Convergence Status:      HIGH (Population converging)
+  Level Completion:            40.5%
+  Cumulative Time:            29.03s (0m 29s)
+  Total Improvement:        2200.00 pixels
+  Avg Improvement/Gen:        68.75 pixels
+  Est. Remaining Time:   1m 50s
+================================================================================
+    33 |    14850 | -4.186213E+03 | -5.023333E+03
+
+================================================================================
+GENERATION 33 COMPLETE
+================================================================================
+  Best Distance:            5023.33 pixels
+  Average Distance:         4186.21 pixels
+  Median Distance:          4180.00 pixels
+  Min Distance:             4088.33 pixels
+  Standard Deviation:         80.39
+  Population Range:          935.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             1.36s
+  Average Gen Time:            0.95s
+  Time vs Avg:                +0.41s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            40.5%
+  Cumulative Time:            30.38s (0m 30s)
+  Total Improvement:        2200.00 pixels
+  Avg Improvement/Gen:        66.67 pixels
+  Est. Remaining Time:   1m 51s
+================================================================================
+    34 |    15300 | -4.204567E+03 | -5.023333E+03
+
+================================================================================
+GENERATION 34 COMPLETE
+================================================================================
+  Best Distance:            5023.33 pixels
+  Average Distance:         4204.57 pixels
+  Median Distance:          4189.17 pixels
+  Min Distance:             4134.17 pixels
+  Standard Deviation:         77.27
+  Population Range:          889.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             1.58s
+  Average Gen Time:            0.97s
+  Time vs Avg:                +0.61s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            40.5%
+  Cumulative Time:            31.96s (0m 31s)
+  Total Improvement:        2200.00 pixels
+  Avg Improvement/Gen:        64.71 pixels
+  Est. Remaining Time:   1m 52s
+================================================================================
+    35 |    15750 | -4.226811E+03 | -5.023333E+03
+
+================================================================================
+GENERATION 35 COMPLETE
+================================================================================
+  Best Distance:            5023.33 pixels
+  Average Distance:         4226.81 pixels
+  Median Distance:          4207.50 pixels
+  Min Distance:             4152.50 pixels
+  Standard Deviation:         84.20
+  Population Range:          870.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             1.39s
+  Average Gen Time:            0.98s
+  Time vs Avg:                +0.41s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            40.5%
+  Cumulative Time:            33.36s (0m 33s)
+  Total Improvement:        2200.00 pixels
+  Avg Improvement/Gen:        62.86 pixels
+  Est. Remaining Time:   1m 52s
+================================================================================
+    36 |    16200 | -4.254250E+03 | -5.023333E+03
+
+================================================================================
+GENERATION 36 COMPLETE
+================================================================================
+  Best Distance:            5023.33 pixels
+  Average Distance:         4254.25 pixels
+  Median Distance:          4216.67 pixels
+  Min Distance:             4180.00 pixels
+  Standard Deviation:         99.09
+  Population Range:          843.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               5
+  Generation Time:             1.77s
+  Average Gen Time:            1.00s
+  Time vs Avg:                +0.77s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            40.5%
+  Cumulative Time:            35.13s (0m 35s)
+  Total Improvement:        2200.00 pixels
+  Avg Improvement/Gen:        61.11 pixels
+  Est. Remaining Time:   1m 54s
+================================================================================
+    37 |    16650 | -4.283339E+03 | -5.151667E+03
+
+================================================================================
+GENERATION 37 COMPLETE
+================================================================================
+  Best Distance:            5151.67 pixels
+  Average Distance:         4283.34 pixels
+  Median Distance:          4271.67 pixels
+  Min Distance:             4198.33 pixels
+  Standard Deviation:        120.70
+  Population Range:          953.33 pixels
+  Improvement:              +128.33 pixels
+  Improvement %:              +2.55%
+  Stagnation Count:               0
+  Generation Time:             1.65s
+  Average Gen Time:            1.02s
+  Time vs Avg:                +0.63s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            41.5%
+  Cumulative Time:            36.78s (0m 36s)
+  Total Improvement:        2328.33 pixels
+  Avg Improvement/Gen:        62.93 pixels
+  Est. Remaining Time:   1m 55s
+================================================================================
+    38 |    17100 | -4.327869E+03 | -5.151667E+03
+
+================================================================================
+GENERATION 38 COMPLETE
+================================================================================
+  Best Distance:            5151.67 pixels
+  Average Distance:         4327.87 pixels
+  Median Distance:          4271.67 pixels
+  Min Distance:             4216.67 pixels
+  Standard Deviation:        143.00
+  Population Range:          935.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             1.75s
+  Average Gen Time:            1.04s
+  Time vs Avg:                +0.71s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            41.5%
+  Cumulative Time:            38.53s (0m 38s)
+  Total Improvement:        2328.33 pixels
+  Avg Improvement/Gen:        61.27 pixels
+  Est. Remaining Time:   1m 56s
+================================================================================
+    39 |    17550 | -4.389367E+03 | -5.151667E+03
+
+================================================================================
+GENERATION 39 COMPLETE
+================================================================================
+  Best Distance:            5151.67 pixels
+  Average Distance:         4389.37 pixels
+  Median Distance:          4285.42 pixels
+  Min Distance:             4271.67 pixels
+  Standard Deviation:        165.44
+  Population Range:          880.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             1.97s
+  Average Gen Time:            1.07s
+  Time vs Avg:                +0.90s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            41.5%
+  Cumulative Time:            40.50s (0m 40s)
+  Total Improvement:        2328.33 pixels
+  Avg Improvement/Gen:        59.70 pixels
+  Est. Remaining Time:   1m 58s
+================================================================================
+    40 |    18000 | -4.480117E+03 | -5.170000E+03
+
+================================================================================
+GENERATION 40 COMPLETE
+================================================================================
+  Best Distance:            5170.00 pixels
+  Average Distance:         4480.12 pixels
+  Median Distance:          4528.33 pixels
+  Min Distance:             4271.67 pixels
+  Standard Deviation:        189.14
+  Population Range:          898.33 pixels
+  Improvement:               +18.33 pixels
+  Improvement %:              +0.36%
+  Stagnation Count:               0
+  Generation Time:             1.88s
+  Average Gen Time:            1.09s
+  Time vs Avg:                +0.80s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            41.7%
+  Cumulative Time:            42.39s (0m 42s)
+  Total Improvement:        2346.67 pixels
+  Avg Improvement/Gen:        58.67 pixels
+  Est. Remaining Time:   1m 59s
+================================================================================
+    41 |    18450 | -4.598794E+03 | -5.170000E+03
+
+================================================================================
+GENERATION 41 COMPLETE
+================================================================================
+  Best Distance:            5170.00 pixels
+  Average Distance:         4598.79 pixels
+  Median Distance:          4528.33 pixels
+  Min Distance:             4345.00 pixels
+  Standard Deviation:        150.50
+  Population Range:          825.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             1.86s
+  Average Gen Time:            1.11s
+  Time vs Avg:                +0.75s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            41.7%
+  Cumulative Time:            44.24s (0m 44s)
+  Total Improvement:        2346.67 pixels
+  Avg Improvement/Gen:        57.24 pixels
+  Est. Remaining Time:   2m 0s
+================================================================================
+    42 |    18900 | -4.675550E+03 | -5.170000E+03
+
+================================================================================
+GENERATION 42 COMPLETE
+================================================================================
+  Best Distance:            5170.00 pixels
+  Average Distance:         4675.55 pixels
+  Median Distance:          4629.17 pixels
+  Min Distance:             4528.33 pixels
+  Standard Deviation:        156.62
+  Population Range:          641.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             2.11s
+  Average Gen Time:            1.13s
+  Time vs Avg:                +0.98s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            41.7%
+  Cumulative Time:            46.35s (0m 46s)
+  Total Improvement:        2346.67 pixels
+  Avg Improvement/Gen:        55.87 pixels
+  Est. Remaining Time:   2m 2s
+================================================================================
+    43 |    19350 | -4.755748E+03 | -5.170000E+03
+
+================================================================================
+GENERATION 43 COMPLETE
+================================================================================
+  Best Distance:            5170.00 pixels
+  Average Distance:         4755.75 pixels
+  Median Distance:          4730.00 pixels
+  Min Distance:             4583.33 pixels
+  Standard Deviation:        148.18
+  Population Range:          586.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             2.20s
+  Average Gen Time:            1.16s
+  Time vs Avg:                +1.04s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            41.7%
+  Cumulative Time:            48.55s (0m 48s)
+  Total Improvement:        2346.67 pixels
+  Avg Improvement/Gen:        54.57 pixels
+  Est. Remaining Time:   2m 3s
+================================================================================
+    44 |    19800 | -4.832585E+03 | -5.170000E+03
+
+================================================================================
+GENERATION 44 COMPLETE
+================================================================================
+  Best Distance:            5170.00 pixels
+  Average Distance:         4832.59 pixels
+  Median Distance:          4775.83 pixels
+  Min Distance:             4675.00 pixels
+  Standard Deviation:        145.12
+  Population Range:          495.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             2.00s
+  Average Gen Time:            1.18s
+  Time vs Avg:                +0.82s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            41.7%
+  Cumulative Time:            50.55s (0m 50s)
+  Total Improvement:        2346.67 pixels
+  Avg Improvement/Gen:        53.33 pixels
+  Est. Remaining Time:   2m 4s
+================================================================================
+    45 |    20250 | -4.896385E+03 | -5.490833E+03
+
+================================================================================
+GENERATION 45 COMPLETE
+================================================================================
+  Best Distance:            5490.83 pixels
+  Average Distance:         4896.39 pixels
+  Median Distance:          4775.83 pixels
+  Min Distance:             4775.83 pixels
+  Standard Deviation:        145.40
+  Population Range:          715.00 pixels
+  Improvement:              +320.83 pixels
+  Improvement %:              +6.21%
+  Stagnation Count:               0
+  Generation Time:             2.21s
+  Average Gen Time:            1.20s
+  Time vs Avg:                +1.01s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            44.3%
+  Cumulative Time:            52.76s (0m 52s)
+  Total Improvement:        2667.50 pixels
+  Avg Improvement/Gen:        59.28 pixels
+  Est. Remaining Time:   2m 5s
+================================================================================
+    46 |    20700 | -4.956315E+03 | -5.490833E+03
+
+================================================================================
+GENERATION 46 COMPLETE
+================================================================================
+  Best Distance:            5490.83 pixels
+  Average Distance:         4956.31 pixels
+  Median Distance:          5023.33 pixels
+  Min Distance:             4775.83 pixels
+  Standard Deviation:        143.03
+  Population Range:          715.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             2.53s
+  Average Gen Time:            1.23s
+  Time vs Avg:                +1.30s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            44.3%
+  Cumulative Time:            55.29s (0m 55s)
+  Total Improvement:        2667.50 pixels
+  Avg Improvement/Gen:        57.99 pixels
+  Est. Remaining Time:   2m 7s
+================================================================================
+    47 |    21150 | -5.035596E+03 | -5.490833E+03
+
+================================================================================
+GENERATION 47 COMPLETE
+================================================================================
+  Best Distance:            5490.83 pixels
+  Average Distance:         5035.60 pixels
+  Median Distance:          5023.33 pixels
+  Min Distance:             4785.00 pixels
+  Standard Deviation:         91.28
+  Population Range:          705.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             2.54s
+  Average Gen Time:            1.26s
+  Time vs Avg:                +1.28s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.3%
+  Cumulative Time:            57.83s (0m 57s)
+  Total Improvement:        2667.50 pixels
+  Avg Improvement/Gen:        56.76 pixels
+  Est. Remaining Time:   2m 9s
+================================================================================
+    48 |    21600 | -5.069044E+03 | -5.490833E+03
+
+================================================================================
+GENERATION 48 COMPLETE
+================================================================================
+  Best Distance:            5490.83 pixels
+  Average Distance:         5069.04 pixels
+  Median Distance:          5023.33 pixels
+  Min Distance:             5023.33 pixels
+  Standard Deviation:         65.46
+  Population Range:          467.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             2.34s
+  Average Gen Time:            1.28s
+  Time vs Avg:                +1.06s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.3%
+  Cumulative Time:            60.17s (1m 0s)
+  Total Improvement:        2667.50 pixels
+  Avg Improvement/Gen:        55.57 pixels
+  Est. Remaining Time:   2m 10s
+================================================================================
+    49 |    22050 | -5.081246E+03 | -5.490833E+03
+
+================================================================================
+GENERATION 49 COMPLETE
+================================================================================
+  Best Distance:            5490.83 pixels
+  Average Distance:         5081.25 pixels
+  Median Distance:          5032.50 pixels
+  Min Distance:             5023.33 pixels
+  Standard Deviation:         67.86
+  Population Range:          467.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             2.17s
+  Average Gen Time:            1.30s
+  Time vs Avg:                +0.87s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.3%
+  Cumulative Time:            62.33s (1m 2s)
+  Total Improvement:        2667.50 pixels
+  Avg Improvement/Gen:        54.44 pixels
+  Est. Remaining Time:   2m 11s
+================================================================================
+    50 |    22500 | -5.101006E+03 | -5.490833E+03
+
+================================================================================
+GENERATION 50 COMPLETE
+================================================================================
+  Best Distance:            5490.83 pixels
+  Average Distance:         5101.01 pixels
+  Median Distance:          5105.83 pixels
+  Min Distance:             5023.33 pixels
+  Standard Deviation:         67.38
+  Population Range:          467.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               5
+  Generation Time:             2.09s
+  Average Gen Time:            1.31s
+  Time vs Avg:                +0.78s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.3%
+  Cumulative Time:            64.43s (1m 4s)
+  Total Improvement:        2667.50 pixels
+  Avg Improvement/Gen:        53.35 pixels
+  Est. Remaining Time:   2m 11s
+================================================================================
+    51 |    22950 | -5.128363E+03 | -5.490833E+03
+
+================================================================================
+GENERATION 51 COMPLETE
+================================================================================
+  Best Distance:            5490.83 pixels
+  Average Distance:         5128.36 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5023.33 pixels
+  Standard Deviation:         57.10
+  Population Range:          467.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               6
+  Generation Time:             2.15s
+  Average Gen Time:            1.33s
+  Time vs Avg:                +0.82s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.3%
+  Cumulative Time:            66.57s (1m 6s)
+  Total Improvement:        2667.50 pixels
+  Avg Improvement/Gen:        52.30 pixels
+  Est. Remaining Time:   2m 11s
+================================================================================
+    52 |    23400 | -5.155924E+03 | -5.490833E+03
+
+================================================================================
+GENERATION 52 COMPLETE
+================================================================================
+  Best Distance:            5490.83 pixels
+  Average Distance:         5155.92 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5087.50 pixels
+  Standard Deviation:         30.53
+  Population Range:          403.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               7
+  Generation Time:             2.20s
+  Average Gen Time:            1.35s
+  Time vs Avg:                +0.85s
+  Convergence Status:      HIGH (Population converging)
+  Level Completion:            44.3%
+  Cumulative Time:            68.77s (1m 8s)
+  Total Improvement:        2667.50 pixels
+  Avg Improvement/Gen:        51.30 pixels
+  Est. Remaining Time:   2m 12s
+================================================================================
+    53 |    23850 | -5.169572E+03 | -5.490833E+03
+
+================================================================================
+GENERATION 53 COMPLETE
+================================================================================
+  Best Distance:            5490.83 pixels
+  Average Distance:         5169.57 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5151.67 pixels
+  Standard Deviation:         16.17
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               8
+  Generation Time:             2.35s
+  Average Gen Time:            1.37s
+  Time vs Avg:                +0.99s
+  Convergence Status:      HIGH (Population converging)
+  Level Completion:            44.3%
+  Cumulative Time:            71.13s (1m 11s)
+  Total Improvement:        2667.50 pixels
+  Avg Improvement/Gen:        50.33 pixels
+  Est. Remaining Time:   2m 12s
+================================================================================
+    54 |    24300 | -5.170917E+03 | -5.490833E+03
+
+================================================================================
+GENERATION 54 COMPLETE
+================================================================================
+  Best Distance:            5490.83 pixels
+  Average Distance:         5170.92 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         15.40
+  Population Range:          320.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               9
+  Generation Time:             2.17s
+  Average Gen Time:            1.38s
+  Time vs Avg:                +0.79s
+  Convergence Status:      HIGH (Population converging)
+  Level Completion:            44.3%
+  Cumulative Time:            73.30s (1m 13s)
+  Total Improvement:        2667.50 pixels
+  Avg Improvement/Gen:        49.40 pixels
+  Est. Remaining Time:   2m 12s
+================================================================================
+    55 |    24750 | -5.171670E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 55 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5171.67 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         22.16
+  Population Range:          339.17 pixels
+  Improvement:               +18.33 pixels
+  Improvement %:              +0.33%
+  Stagnation Count:               0
+  Generation Time:             2.15s
+  Average Gen Time:            1.40s
+  Time vs Avg:                +0.75s
+  Convergence Status:      HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:            75.44s (1m 15s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        48.83 pixels
+  Est. Remaining Time:   2m 12s
+================================================================================
+    56 |    25200 | -5.171670E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 56 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5171.67 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         22.16
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             2.18s
+  Average Gen Time:            1.41s
+  Time vs Avg:                +0.77s
+  Convergence Status:      HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:            77.63s (1m 17s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        47.96 pixels
+  Est. Remaining Time:   2m 12s
+================================================================================
+    57 |    25650 | -5.171670E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 57 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5171.67 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         22.16
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             2.21s
+  Average Gen Time:            1.43s
+  Time vs Avg:                +0.78s
+  Convergence Status:      HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:            79.84s (1m 19s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        47.12 pixels
+  Est. Remaining Time:   2m 12s
+================================================================================
+    58 |    26100 | -5.172383E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 58 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5172.38 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         26.31
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             2.22s
+  Average Gen Time:            1.44s
+  Time vs Avg:                +0.78s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:            82.06s (1m 22s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        46.31 pixels
+  Est. Remaining Time:   2m 12s
+================================================================================
+    59 |    26550 | -5.172465E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 59 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5172.46 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         26.33
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             2.16s
+  Average Gen Time:            1.45s
+  Time vs Avg:                +0.71s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:            84.22s (1m 24s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        45.52 pixels
+  Est. Remaining Time:   2m 12s
+================================================================================
+    60 |    27000 | -5.172465E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 60 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5172.46 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         26.33
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               5
+  Generation Time:             2.12s
+  Average Gen Time:            1.46s
+  Time vs Avg:                +0.66s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:            86.34s (1m 26s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        44.76 pixels
+  Est. Remaining Time:   2m 11s
+================================================================================
+    61 |    27450 | -5.173137E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 61 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5173.14 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         29.88
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               6
+  Generation Time:             2.22s
+  Average Gen Time:            1.48s
+  Time vs Avg:                +0.74s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:            88.57s (1m 28s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        44.03 pixels
+  Est. Remaining Time:   2m 11s
+================================================================================
+    62 |    27900 | -5.173931E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 62 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5173.93 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         33.43
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               7
+  Generation Time:             3.87s
+  Average Gen Time:            1.52s
+  Time vs Avg:                +2.36s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:            92.44s (1m 32s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        43.32 pixels
+  Est. Remaining Time:   2m 13s
+================================================================================
+    63 |    28350 | -5.175439E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 63 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5175.44 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         39.21
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               8
+  Generation Time:             2.43s
+  Average Gen Time:            1.53s
+  Time vs Avg:                +0.90s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:            94.87s (1m 34s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        42.63 pixels
+  Est. Remaining Time:   2m 13s
+================================================================================
+    64 |    28800 | -5.175663E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 64 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5175.66 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         39.32
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               9
+  Generation Time:             2.40s
+  Average Gen Time:            1.54s
+  Time vs Avg:                +0.85s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:            97.27s (1m 37s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        41.97 pixels
+  Est. Remaining Time:   2m 12s
+================================================================================
+    65 |    29250 | -5.177130E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 65 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5177.13 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         44.28
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              10
+  Generation Time:             2.44s
+  Average Gen Time:            1.56s
+  Time vs Avg:                +0.89s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:            99.71s (1m 39s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        41.32 pixels
+  Est. Remaining Time:   2m 12s
+================================================================================
+    66 |    29700 | -5.180654E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 66 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5180.65 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         54.48
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              11
+  Generation Time:             2.30s
+  Average Gen Time:            1.57s
+  Time vs Avg:                +0.73s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:           102.01s (1m 42s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        40.69 pixels
+  Est. Remaining Time:   2m 11s
+================================================================================
+    67 |    30150 | -5.183607E+03 | -5.509167E+03
+
+================================================================================
+GENERATION 67 COMPLETE
+================================================================================
+  Best Distance:            5509.17 pixels
+  Average Distance:         5183.61 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         60.97
+  Population Range:          339.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              12
+  Generation Time:             2.34s
+  Average Gen Time:            1.58s
+  Time vs Avg:                +0.76s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.4%
+  Cumulative Time:           104.35s (1m 44s)
+  Total Improvement:        2685.83 pixels
+  Avg Improvement/Gen:        40.09 pixels
+  Est. Remaining Time:   2m 11s
+================================================================================
+    68 |    30600 | -5.187620E+03 | -5.536667E+03
+
+================================================================================
+GENERATION 68 COMPLETE
+================================================================================
+  Best Distance:            5536.67 pixels
+  Average Distance:         5187.62 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         68.88
+  Population Range:          366.67 pixels
+  Improvement:               +27.50 pixels
+  Improvement %:              +0.50%
+  Stagnation Count:               0
+  Generation Time:             2.17s
+  Average Gen Time:            1.59s
+  Time vs Avg:                +0.58s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.7%
+  Cumulative Time:           106.52s (1m 46s)
+  Total Improvement:        2713.33 pixels
+  Avg Improvement/Gen:        39.90 pixels
+  Est. Remaining Time:   2m 10s
+================================================================================
+    69 |    31050 | -5.189311E+03 | -5.536667E+03
+
+================================================================================
+GENERATION 69 COMPLETE
+================================================================================
+  Best Distance:            5536.67 pixels
+  Average Distance:         5189.31 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         71.41
+  Population Range:          366.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             2.30s
+  Average Gen Time:            1.60s
+  Time vs Avg:                +0.70s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.7%
+  Cumulative Time:           108.82s (1m 48s)
+  Total Improvement:        2713.33 pixels
+  Avg Improvement/Gen:        39.32 pixels
+  Est. Remaining Time:   2m 9s
+================================================================================
+    70 |    31500 | -5.193691E+03 | -5.545833E+03
+
+================================================================================
+GENERATION 70 COMPLETE
+================================================================================
+  Best Distance:            5545.83 pixels
+  Average Distance:         5193.69 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         79.03
+  Population Range:          375.83 pixels
+  Improvement:                +9.17 pixels
+  Improvement %:              +0.17%
+  Stagnation Count:               0
+  Generation Time:             2.24s
+  Average Gen Time:            1.61s
+  Time vs Avg:                +0.63s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.7%
+  Cumulative Time:           111.05s (1m 51s)
+  Total Improvement:        2722.50 pixels
+  Avg Improvement/Gen:        38.89 pixels
+  Est. Remaining Time:   2m 8s
+================================================================================
+    71 |    31950 | -5.202124E+03 | -5.545833E+03
+
+================================================================================
+GENERATION 71 COMPLETE
+================================================================================
+  Best Distance:            5545.83 pixels
+  Average Distance:         5202.12 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         91.10
+  Population Range:          375.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             2.31s
+  Average Gen Time:            1.62s
+  Time vs Avg:                +0.69s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.7%
+  Cumulative Time:           113.36s (1m 53s)
+  Total Improvement:        2722.50 pixels
+  Avg Improvement/Gen:        38.35 pixels
+  Est. Remaining Time:   2m 7s
+================================================================================
+    72 |    32400 | -5.209315E+03 | -5.545833E+03
+
+================================================================================
+GENERATION 72 COMPLETE
+================================================================================
+  Best Distance:            5545.83 pixels
+  Average Distance:         5209.31 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:         98.74
+  Population Range:          375.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             2.32s
+  Average Gen Time:            1.63s
+  Time vs Avg:                +0.69s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.7%
+  Cumulative Time:           115.68s (1m 55s)
+  Total Improvement:        2722.50 pixels
+  Avg Improvement/Gen:        37.81 pixels
+  Est. Remaining Time:   2m 7s
+================================================================================
+    73 |    32850 | -5.220315E+03 | -5.545833E+03
+
+================================================================================
+GENERATION 73 COMPLETE
+================================================================================
+  Best Distance:            5545.83 pixels
+  Average Distance:         5220.31 pixels
+  Median Distance:          5170.00 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:        108.52
+  Population Range:          375.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             2.40s
+  Average Gen Time:            1.64s
+  Time vs Avg:                +0.76s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            44.7%
+  Cumulative Time:           118.07s (1m 58s)
+  Total Improvement:        2722.50 pixels
+  Avg Improvement/Gen:        37.29 pixels
+  Est. Remaining Time:   2m 6s
+================================================================================
+    74 |    33300 | -5.245065E+03 | -5.545833E+03
+
+================================================================================
+GENERATION 74 COMPLETE
+================================================================================
+  Best Distance:            5545.83 pixels
+  Average Distance:         5245.06 pixels
+  Median Distance:          5179.17 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:        125.45
+  Population Range:          375.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             2.32s
+  Average Gen Time:            1.65s
+  Time vs Avg:                +0.67s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            44.7%
+  Cumulative Time:           120.40s (2m 0s)
+  Total Improvement:        2722.50 pixels
+  Avg Improvement/Gen:        36.79 pixels
+  Est. Remaining Time:   2m 5s
+================================================================================
+    75 |    33750 | -5.274581E+03 | -5.545833E+03
+
+================================================================================
+GENERATION 75 COMPLETE
+================================================================================
+  Best Distance:            5545.83 pixels
+  Average Distance:         5274.58 pixels
+  Median Distance:          5188.33 pixels
+  Min Distance:             5170.00 pixels
+  Standard Deviation:        136.92
+  Population Range:          375.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               5
+  Generation Time:             2.38s
+  Average Gen Time:            1.66s
+  Time vs Avg:                +0.73s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            44.7%
+  Cumulative Time:           122.78s (2m 2s)
+  Total Improvement:        2722.50 pixels
+  Avg Improvement/Gen:        36.30 pixels
+  Est. Remaining Time:   2m 4s
+================================================================================
+    76 |    34200 | -5.328807E+03 | -5.545833E+03
+
+================================================================================
+GENERATION 76 COMPLETE
+================================================================================
+  Best Distance:            5545.83 pixels
+  Average Distance:         5328.81 pixels
+  Median Distance:          5225.00 pixels
+  Min Distance:             5188.33 pixels
+  Standard Deviation:        141.38
+  Population Range:          357.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               6
+  Generation Time:             2.47s
+  Average Gen Time:            1.67s
+  Time vs Avg:                +0.80s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            44.7%
+  Cumulative Time:           125.26s (2m 5s)
+  Total Improvement:        2722.50 pixels
+  Avg Improvement/Gen:        35.82 pixels
+  Est. Remaining Time:   2m 3s
+================================================================================
+    77 |    34650 | -5.402670E+03 | -5.545833E+03
+
+================================================================================
+GENERATION 77 COMPLETE
+================================================================================
+  Best Distance:            5545.83 pixels
+  Average Distance:         5402.67 pixels
+  Median Distance:          5472.50 pixels
+  Min Distance:             5188.33 pixels
+  Standard Deviation:        120.64
+  Population Range:          357.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               7
+  Generation Time:             2.57s
+  Average Gen Time:            1.68s
+  Time vs Avg:                +0.89s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            44.7%
+  Cumulative Time:           127.83s (2m 7s)
+  Total Improvement:        2722.50 pixels
+  Avg Improvement/Gen:        35.36 pixels
+  Est. Remaining Time:   2m 2s
+================================================================================
+    78 |    35100 | -5.476289E+03 | -5.545833E+03
+
+================================================================================
+GENERATION 78 COMPLETE
+================================================================================
+  Best Distance:            5545.83 pixels
+  Average Distance:         5476.29 pixels
+  Median Distance:          5472.50 pixels
+  Min Distance:             5472.50 pixels
+  Standard Deviation:         13.28
+  Population Range:           73.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               8
+  Generation Time:             2.60s
+  Average Gen Time:            1.69s
+  Time vs Avg:                +0.90s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            44.7%
+  Cumulative Time:           130.43s (2m 10s)
+  Total Improvement:        2722.50 pixels
+  Avg Improvement/Gen:        34.90 pixels
+  Est. Remaining Time:   2m 1s
+================================================================================
+    79 |    35550 | -5.477552E+03 | -5.710833E+03
+
+================================================================================
+GENERATION 79 COMPLETE
+================================================================================
+  Best Distance:            5710.83 pixels
+  Average Distance:         5477.55 pixels
+  Median Distance:          5472.50 pixels
+  Min Distance:             5472.50 pixels
+  Standard Deviation:         18.28
+  Population Range:          238.33 pixels
+  Improvement:              +165.00 pixels
+  Improvement %:              +2.98%
+  Stagnation Count:               0
+  Generation Time:             2.62s
+  Average Gen Time:            1.71s
+  Time vs Avg:                +0.92s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            46.1%
+  Cumulative Time:           133.05s (2m 13s)
+  Total Improvement:        2887.50 pixels
+  Avg Improvement/Gen:        36.55 pixels
+  Est. Remaining Time:   2m 1s
+================================================================================
+    80 |    36000 | -5.479813E+03 | -5.710833E+03
+
+================================================================================
+GENERATION 80 COMPLETE
+================================================================================
+  Best Distance:            5710.83 pixels
+  Average Distance:         5479.81 pixels
+  Median Distance:          5472.50 pixels
+  Min Distance:             5472.50 pixels
+  Standard Deviation:         22.99
+  Population Range:          238.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             2.67s
+  Average Gen Time:            1.72s
+  Time vs Avg:                +0.95s
+  Convergence Status:      HIGH (Population converging)
+  Level Completion:            46.1%
+  Cumulative Time:           135.72s (2m 15s)
+  Total Improvement:        2887.50 pixels
+  Avg Improvement/Gen:        36.09 pixels
+  Est. Remaining Time:   2m 0s
+================================================================================
+    81 |    36450 | -5.481870E+03 | -5.710833E+03
+
+================================================================================
+GENERATION 81 COMPLETE
+================================================================================
+  Best Distance:            5710.83 pixels
+  Average Distance:         5481.87 pixels
+  Median Distance:          5472.50 pixels
+  Min Distance:             5472.50 pixels
+  Standard Deviation:         24.60
+  Population Range:          238.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             2.58s
+  Average Gen Time:            1.73s
+  Time vs Avg:                +0.85s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            46.1%
+  Cumulative Time:           138.30s (2m 18s)
+  Total Improvement:        2887.50 pixels
+  Avg Improvement/Gen:        35.65 pixels
+  Est. Remaining Time:   1m 59s
+================================================================================
+    82 |    36900 | -5.484580E+03 | -5.710833E+03
+
+================================================================================
+GENERATION 82 COMPLETE
+================================================================================
+  Best Distance:            5710.83 pixels
+  Average Distance:         5484.58 pixels
+  Median Distance:          5472.50 pixels
+  Min Distance:             5472.50 pixels
+  Standard Deviation:         28.13
+  Population Range:          238.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             2.51s
+  Average Gen Time:            1.74s
+  Time vs Avg:                +0.77s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            46.1%
+  Cumulative Time:           140.81s (2m 20s)
+  Total Improvement:        2887.50 pixels
+  Avg Improvement/Gen:        35.21 pixels
+  Est. Remaining Time:   1m 58s
+================================================================================
+    83 |    37350 | -5.488633E+03 | -5.710833E+03
+
+================================================================================
+GENERATION 83 COMPLETE
+================================================================================
+  Best Distance:            5710.83 pixels
+  Average Distance:         5488.63 pixels
+  Median Distance:          5472.50 pixels
+  Min Distance:             5472.50 pixels
+  Standard Deviation:         29.60
+  Population Range:          238.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             2.52s
+  Average Gen Time:            1.75s
+  Time vs Avg:                +0.77s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            46.1%
+  Cumulative Time:           143.33s (2m 23s)
+  Total Improvement:        2887.50 pixels
+  Avg Improvement/Gen:        34.79 pixels
+  Est. Remaining Time:   1m 57s
+================================================================================
+    84 |    37800 | -5.498472E+03 | -5.710833E+03
+
+================================================================================
+GENERATION 84 COMPLETE
+================================================================================
+  Best Distance:            5710.83 pixels
+  Average Distance:         5498.47 pixels
+  Median Distance:          5490.83 pixels
+  Min Distance:             5472.50 pixels
+  Standard Deviation:         35.57
+  Population Range:          238.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               5
+  Generation Time:             2.57s
+  Average Gen Time:            1.76s
+  Time vs Avg:                +0.81s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            46.1%
+  Cumulative Time:           145.90s (2m 25s)
+  Total Improvement:        2887.50 pixels
+  Avg Improvement/Gen:        34.38 pixels
+  Est. Remaining Time:   1m 56s
+================================================================================
+    85 |    38250 | -5.510959E+03 | -5.710833E+03
+
+================================================================================
+GENERATION 85 COMPLETE
+================================================================================
+  Best Distance:            5710.83 pixels
+  Average Distance:         5510.96 pixels
+  Median Distance:          5500.00 pixels
+  Min Distance:             5472.50 pixels
+  Standard Deviation:         34.96
+  Population Range:          238.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               6
+  Generation Time:             2.71s
+  Average Gen Time:            1.77s
+  Time vs Avg:                +0.94s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            46.1%
+  Cumulative Time:           148.60s (2m 28s)
+  Total Improvement:        2887.50 pixels
+  Avg Improvement/Gen:        33.97 pixels
+  Est. Remaining Time:   1m 54s
+================================================================================
+    86 |    38700 | -5.527928E+03 | -5.710833E+03
+
+================================================================================
+GENERATION 86 COMPLETE
+================================================================================
+  Best Distance:            5710.83 pixels
+  Average Distance:         5527.93 pixels
+  Median Distance:          5536.67 pixels
+  Min Distance:             5490.83 pixels
+  Standard Deviation:         31.71
+  Population Range:          220.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               7
+  Generation Time:             2.74s
+  Average Gen Time:            1.78s
+  Time vs Avg:                +0.96s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            46.1%
+  Cumulative Time:           151.35s (2m 31s)
+  Total Improvement:        2887.50 pixels
+  Avg Improvement/Gen:        33.58 pixels
+  Est. Remaining Time:   1m 53s
+================================================================================
+    87 |    39150 | -5.543165E+03 | -5.729167E+03
+
+================================================================================
+GENERATION 87 COMPLETE
+================================================================================
+  Best Distance:            5729.17 pixels
+  Average Distance:         5543.16 pixels
+  Median Distance:          5536.67 pixels
+  Min Distance:             5536.67 pixels
+  Standard Deviation:         30.43
+  Population Range:          192.50 pixels
+  Improvement:               +18.33 pixels
+  Improvement %:              +0.32%
+  Stagnation Count:               0
+  Generation Time:             2.72s
+  Average Gen Time:            1.79s
+  Time vs Avg:                +0.93s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            46.2%
+  Cumulative Time:           154.07s (2m 34s)
+  Total Improvement:        2905.83 pixels
+  Avg Improvement/Gen:        33.40 pixels
+  Est. Remaining Time:   1m 52s
+================================================================================
+    88 |    39600 | -5.548135E+03 | -6.783333E+03
+
+================================================================================
+GENERATION 88 COMPLETE
+================================================================================
+  Best Distance:            6783.33 pixels
+  Average Distance:         5548.14 pixels
+  Median Distance:          5536.67 pixels
+  Min Distance:             5536.67 pixels
+  Standard Deviation:         68.04
+  Population Range:         1246.67 pixels
+  Improvement:             +1054.17 pixels
+  Improvement %:             +18.40%
+  Stagnation Count:               0
+  Generation Time:             2.66s
+  Average Gen Time:            1.80s
+  Time vs Avg:                +0.86s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            54.7%
+  Cumulative Time:           156.73s (2m 36s)
+  Total Improvement:        3960.00 pixels
+  Avg Improvement/Gen:        45.00 pixels
+  Est. Remaining Time:   1m 51s
+================================================================================
+    89 |    40050 | -5.550885E+03 | -6.783333E+03
+
+================================================================================
+GENERATION 89 COMPLETE
+================================================================================
+  Best Distance:            6783.33 pixels
+  Average Distance:         5550.89 pixels
+  Median Distance:          5536.67 pixels
+  Min Distance:             5536.67 pixels
+  Standard Deviation:         70.48
+  Population Range:         1246.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             2.62s
+  Average Gen Time:            1.81s
+  Time vs Avg:                +0.81s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            54.7%
+  Cumulative Time:           159.36s (2m 39s)
+  Total Improvement:        3960.00 pixels
+  Avg Improvement/Gen:        44.49 pixels
+  Est. Remaining Time:   1m 50s
+================================================================================
+    90 |    40500 | -5.560663E+03 | -6.783333E+03
+
+================================================================================
+GENERATION 90 COMPLETE
+================================================================================
+  Best Distance:            6783.33 pixels
+  Average Distance:         5560.66 pixels
+  Median Distance:          5536.67 pixels
+  Min Distance:             5536.67 pixels
+  Standard Deviation:         90.36
+  Population Range:         1246.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             2.79s
+  Average Gen Time:            1.82s
+  Time vs Avg:                +0.96s
+  Convergence Status:      HIGH (Population converging)
+  Level Completion:            54.7%
+  Cumulative Time:           162.14s (2m 42s)
+  Total Improvement:        3960.00 pixels
+  Avg Improvement/Gen:        44.00 pixels
+  Est. Remaining Time:   1m 49s
+================================================================================
+    91 |    40950 | -5.579669E+03 | -6.783333E+03
+
+================================================================================
+GENERATION 91 COMPLETE
+================================================================================
+  Best Distance:            6783.33 pixels
+  Average Distance:         5579.67 pixels
+  Median Distance:          5545.83 pixels
+  Min Distance:             5536.67 pixels
+  Standard Deviation:        126.27
+  Population Range:         1246.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             2.60s
+  Average Gen Time:            1.83s
+  Time vs Avg:                +0.77s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            54.7%
+  Cumulative Time:           164.74s (2m 44s)
+  Total Improvement:        3960.00 pixels
+  Avg Improvement/Gen:        43.52 pixels
+  Est. Remaining Time:   1m 47s
+================================================================================
+    92 |    41400 | -5.608676E+03 | -6.783333E+03
+
+================================================================================
+GENERATION 92 COMPLETE
+================================================================================
+  Best Distance:            6783.33 pixels
+  Average Distance:         5608.68 pixels
+  Median Distance:          5545.83 pixels
+  Min Distance:             5536.67 pixels
+  Standard Deviation:        145.96
+  Population Range:         1246.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             2.72s
+  Average Gen Time:            1.84s
+  Time vs Avg:                +0.88s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            54.7%
+  Cumulative Time:           167.46s (2m 47s)
+  Total Improvement:        3960.00 pixels
+  Avg Improvement/Gen:        43.04 pixels
+  Est. Remaining Time:   1m 46s
+================================================================================
+    93 |    41850 | -5.659154E+03 | -6.902500E+03
+
+================================================================================
+GENERATION 93 COMPLETE
+================================================================================
+  Best Distance:            6902.50 pixels
+  Average Distance:         5659.15 pixels
+  Median Distance:          5710.83 pixels
+  Min Distance:             5545.83 pixels
+  Standard Deviation:        179.53
+  Population Range:         1356.67 pixels
+  Improvement:              +119.17 pixels
+  Improvement %:              +1.76%
+  Stagnation Count:               0
+  Generation Time:             2.76s
+  Average Gen Time:            1.85s
+  Time vs Avg:                +0.91s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            55.7%
+  Cumulative Time:           170.22s (2m 50s)
+  Total Improvement:        4079.17 pixels
+  Avg Improvement/Gen:        43.86 pixels
+  Est. Remaining Time:   1m 45s
+================================================================================
+    94 |    42300 | -5.765854E+03 | -7.250833E+03
+
+================================================================================
+GENERATION 94 COMPLETE
+================================================================================
+  Best Distance:            7250.83 pixels
+  Average Distance:         5765.85 pixels
+  Median Distance:          5710.83 pixels
+  Min Distance:             5710.83 pixels
+  Standard Deviation:        219.84
+  Population Range:         1540.00 pixels
+  Improvement:              +348.33 pixels
+  Improvement %:              +5.05%
+  Stagnation Count:               0
+  Generation Time:             2.85s
+  Average Gen Time:            1.86s
+  Time vs Avg:                +0.99s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            58.5%
+  Cumulative Time:           173.07s (2m 53s)
+  Total Improvement:        4427.50 pixels
+  Avg Improvement/Gen:        47.10 pixels
+  Est. Remaining Time:   1m 44s
+================================================================================
+    95 |    42750 | -5.832302E+03 | -9.478333E+03
+
+================================================================================
+GENERATION 95 COMPLETE
+================================================================================
+  Best Distance:            9478.33 pixels
+  Average Distance:         5832.30 pixels
+  Median Distance:          5710.83 pixels
+  Min Distance:             5710.83 pixels
+  Standard Deviation:        349.05
+  Population Range:         3767.50 pixels
+  Improvement:             +2227.50 pixels
+  Improvement %:             +30.72%
+  Stagnation Count:               0
+  Generation Time:             3.00s
+  Average Gen Time:            1.87s
+  Time vs Avg:                +1.13s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            76.4%
+  Cumulative Time:           176.08s (2m 56s)
+  Total Improvement:        6655.00 pixels
+  Avg Improvement/Gen:        70.05 pixels
+  Est. Remaining Time:   1m 43s
+================================================================================
+    96 |    43200 | -5.979396E+03 | -9.478333E+03
+
+================================================================================
+GENERATION 96 COMPLETE
+================================================================================
+  Best Distance:            9478.33 pixels
+  Average Distance:         5979.40 pixels
+  Median Distance:          5710.83 pixels
+  Min Distance:             5710.83 pixels
+  Standard Deviation:        474.31
+  Population Range:         3767.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             3.05s
+  Average Gen Time:            1.89s
+  Time vs Avg:                +1.17s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            76.4%
+  Cumulative Time:           179.13s (2m 59s)
+  Total Improvement:        6655.00 pixels
+  Avg Improvement/Gen:        69.32 pixels
+  Est. Remaining Time:   1m 41s
+================================================================================
+    97 |    43650 | -6.272791E+03 | -9.478333E+03
+
+================================================================================
+GENERATION 97 COMPLETE
+================================================================================
+  Best Distance:            9478.33 pixels
+  Average Distance:         6272.79 pixels
+  Median Distance:          6572.50 pixels
+  Min Distance:             5710.83 pixels
+  Standard Deviation:        511.46
+  Population Range:         3767.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             2.96s
+  Average Gen Time:            1.90s
+  Time vs Avg:                +1.06s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            76.4%
+  Cumulative Time:           182.08s (3m 2s)
+  Total Improvement:        6655.00 pixels
+  Avg Improvement/Gen:        68.61 pixels
+  Est. Remaining Time:   1m 40s
+================================================================================
+    98 |    44100 | -6.736013E+03 | -9.478333E+03
+
+================================================================================
+GENERATION 98 COMPLETE
+================================================================================
+  Best Distance:            9478.33 pixels
+  Average Distance:         6736.01 pixels
+  Median Distance:          6572.50 pixels
+  Min Distance:             6572.50 pixels
+  Standard Deviation:        421.79
+  Population Range:         2905.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             3.28s
+  Average Gen Time:            1.91s
+  Time vs Avg:                +1.37s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            76.4%
+  Cumulative Time:           185.37s (3m 5s)
+  Total Improvement:        6655.00 pixels
+  Avg Improvement/Gen:        67.91 pixels
+  Est. Remaining Time:   1m 39s
+================================================================================
+    99 |    44550 | -6.937843E+03 | -9.478333E+03
+
+================================================================================
+GENERATION 99 COMPLETE
+================================================================================
+  Best Distance:            9478.33 pixels
+  Average Distance:         6937.84 pixels
+  Median Distance:          6774.17 pixels
+  Min Distance:             6572.50 pixels
+  Standard Deviation:        579.15
+  Population Range:         2905.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             3.31s
+  Average Gen Time:            1.93s
+  Time vs Avg:                +1.38s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            76.4%
+  Cumulative Time:           188.67s (3m 8s)
+  Total Improvement:        6655.00 pixels
+  Avg Improvement/Gen:        67.22 pixels
+  Est. Remaining Time:   1m 38s
+================================================================================
+   100 |    45000 | -7.236880E+03 | -9.478333E+03
+
+================================================================================
+GENERATION 100 COMPLETE
+================================================================================
+  Best Distance:            9478.33 pixels
+  Average Distance:         7236.88 pixels
+  Median Distance:          6902.50 pixels
+  Min Distance:             6774.17 pixels
+  Standard Deviation:        722.23
+  Population Range:         2704.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               5
+  Generation Time:             3.22s
+  Average Gen Time:            1.94s
+  Time vs Avg:                +1.29s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            76.4%
+  Cumulative Time:           191.89s (3m 11s)
+  Total Improvement:        6655.00 pixels
+  Avg Improvement/Gen:        66.55 pixels
+  Est. Remaining Time:   1m 36s
+================================================================================
+   101 |    45450 | -7.542680E+03 | -9.670833E+03
+
+================================================================================
+GENERATION 101 COMPLETE
+================================================================================
+  Best Distance:            9670.83 pixels
+  Average Distance:         7542.68 pixels
+  Median Distance:          7250.83 pixels
+  Min Distance:             6902.50 pixels
+  Standard Deviation:        834.79
+  Population Range:         2768.33 pixels
+  Improvement:              +192.50 pixels
+  Improvement %:              +2.03%
+  Stagnation Count:               0
+  Generation Time:             3.55s
+  Average Gen Time:            1.95s
+  Time vs Avg:                +1.59s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            78.0%
+  Cumulative Time:           195.44s (3m 15s)
+  Total Improvement:        6847.50 pixels
+  Avg Improvement/Gen:        67.80 pixels
+  Est. Remaining Time:   1m 35s
+================================================================================
+   102 |    45900 | -7.892194E+03 | -9.670833E+03
+
+================================================================================
+GENERATION 102 COMPLETE
+================================================================================
+  Best Distance:            9670.83 pixels
+  Average Distance:         7892.19 pixels
+  Median Distance:          7269.17 pixels
+  Min Distance:             7250.83 pixels
+  Standard Deviation:        942.98
+  Population Range:         2420.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             3.55s
+  Average Gen Time:            1.97s
+  Time vs Avg:               +1.58s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            78.0%
+  Cumulative Time:           198.99s (3m 18s)
+  Total Improvement:        6847.50 pixels
+  Avg Improvement/Gen:        67.13 pixels
+  Est. Remaining Time:   1m 34s
+================================================================================
+   103 |    46350 | -8.351730E+03 | -9.670833E+03
+
+================================================================================
+GENERATION 103 COMPLETE
+================================================================================
+  Best Distance:            9670.83 pixels
+  Average Distance:         8351.73 pixels
+  Median Distance:          9198.75 pixels
+  Min Distance:             7250.83 pixels
+  Standard Deviation:       1011.18
+  Population Range:         2420.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             3.78s
+  Average Gen Time:            1.99s
+  Time vs Avg:                +1.80s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            78.0%
+  Cumulative Time:           202.78s (3m 22s)
+  Total Improvement:        6847.50 pixels
+  Avg Improvement/Gen:        66.48 pixels
+  Est. Remaining Time:   1m 33s
+================================================================================
+   104 |    46800 | -8.967750E+03 | -9.670833E+03
+
+================================================================================
+GENERATION 104 COMPLETE
+================================================================================
+  Best Distance:            9670.83 pixels
+  Average Distance:         8967.75 pixels
+  Median Distance:          9240.00 pixels
+  Min Distance:             7269.17 pixels
+  Standard Deviation:        747.31
+  Population Range:         2401.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             3.85s
+  Average Gen Time:            2.01s
+  Time vs Avg:                +1.85s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:            78.0%
+  Cumulative Time:           206.63s (3m 26s)
+  Total Improvement:        6847.50 pixels
+  Avg Improvement/Gen:        65.84 pixels
+  Est. Remaining Time:   1m 32s
+================================================================================
+   105 |    47250 | -9.338572E+03 | -9.670833E+03
+
+================================================================================
+GENERATION 105 COMPLETE
+================================================================================
+  Best Distance:            9670.83 pixels
+  Average Distance:         9338.57 pixels
+  Median Distance:          9276.67 pixels
+  Min Distance:             9240.00 pixels
+  Standard Deviation:        107.86
+  Population Range:          430.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             4.28s
+  Average Gen Time:            2.03s
+  Time vs Avg:                +2.25s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            78.0%
+  Cumulative Time:           210.91s (3m 30s)
+  Total Improvement:        6847.50 pixels
+  Avg Improvement/Gen:        65.21 pixels
+  Est. Remaining Time:   1m 31s
+================================================================================
+   106 |    47700 | -9.403615E+03 | -9.725833E+03
+
+================================================================================
+GENERATION 106 COMPLETE
+================================================================================
+  Best Distance:            9725.83 pixels
+  Average Distance:         9403.61 pixels
+  Median Distance:          9478.33 pixels
+  Min Distance:             9276.67 pixels
+  Standard Deviation:        103.42
+  Population Range:          449.17 pixels
+  Improvement:               +55.00 pixels
+  Improvement %:              +0.57%
+  Stagnation Count:               0
+  Generation Time:             4.27s
+  Average Gen Time:            2.05s
+  Time vs Avg:                +2.22s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            78.4%
+  Cumulative Time:           215.18s (3m 35s)
+  Total Improvement:        6902.50 pixels
+  Avg Improvement/Gen:        65.12 pixels
+  Est. Remaining Time:   1m 30s
+================================================================================
+   107 |    48150 | -9.478924E+03 | -9.725833E+03
+
+================================================================================
+GENERATION 107 COMPLETE
+================================================================================
+  Best Distance:            9725.83 pixels
+  Average Distance:         9478.92 pixels
+  Median Distance:          9478.33 pixels
+  Min Distance:             9285.83 pixels
+  Standard Deviation:         48.79
+  Population Range:          440.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             4.12s
+  Average Gen Time:            2.07s
+  Time vs Avg:                +2.05s
+  Convergence Status:      HIGH (Population converging)
+  Level Completion:            78.4%
+  Cumulative Time:           219.30s (3m 39s)
+  Total Improvement:        6902.50 pixels
+  Avg Improvement/Gen:        64.51 pixels
+  Est. Remaining Time:   1m 28s
+================================================================================
+   108 |    48600 | -9.494141E+03 | -9.735000E+03
+
+================================================================================
+GENERATION 108 COMPLETE
+================================================================================
+  Best Distance:            9735.00 pixels
+  Average Distance:         9494.14 pixels
+  Median Distance:          9478.33 pixels
+  Min Distance:             9478.33 pixels
+  Standard Deviation:         40.14
+  Population Range:          256.67 pixels
+  Improvement:                +9.17 pixels
+  Improvement %:              +0.09%
+  Stagnation Count:               0
+  Generation Time:             3.92s
+  Average Gen Time:            2.09s
+  Time vs Avg:                +1.83s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            78.5%
+  Cumulative Time:           223.22s (3m 43s)
+  Total Improvement:        6911.67 pixels
+  Avg Improvement/Gen:        64.00 pixels
+  Est. Remaining Time:   1m 27s
+================================================================================
+   109 |    49050 | -9.507504E+03 | -1.010167E+04
+
+================================================================================
+GENERATION 109 COMPLETE
+================================================================================
+  Best Distance:           10101.67 pixels
+  Average Distance:         9507.50 pixels
+  Median Distance:          9478.33 pixels
+  Min Distance:             9478.33 pixels
+  Standard Deviation:         65.27
+  Population Range:          623.33 pixels
+  Improvement:              +366.67 pixels
+  Improvement %:              +3.77%
+  Stagnation Count:               0
+  Generation Time:             3.99s
+  Average Gen Time:            2.10s
+  Time vs Avg:                +1.89s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            81.5%
+  Cumulative Time:           227.21s (3m 47s)
+  Total Improvement:        7278.33 pixels
+  Avg Improvement/Gen:        66.77 pixels
+  Est. Remaining Time:   1m 26s
+================================================================================
+   110 |    49500 | -9.524635E+03 | -1.010167E+04
+
+================================================================================
+GENERATION 110 COMPLETE
+================================================================================
+  Best Distance:           10101.67 pixels
+  Average Distance:         9524.64 pixels
+  Median Distance:          9524.17 pixels
+  Min Distance:             9478.33 pixels
+  Standard Deviation:         72.76
+  Population Range:          623.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             4.23s
+  Average Gen Time:            2.12s
+  Time vs Avg:                +2.11s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            81.5%
+  Cumulative Time:           231.44s (3m 51s)
+  Total Improvement:        7278.33 pixels
+  Avg Improvement/Gen:        66.17 pixels
+  Est. Remaining Time:   1m 24s
+================================================================================
+   111 |    49950 | -9.548693E+03 | -1.010167E+04
+
+================================================================================
+GENERATION 111 COMPLETE
+================================================================================
+  Best Distance:           10101.67 pixels
+  Average Distance:         9548.69 pixels
+  Median Distance:          9524.17 pixels
+  Min Distance:             9478.33 pixels
+  Standard Deviation:         76.54
+  Population Range:          623.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             4.12s
+  Average Gen Time:            2.14s
+  Time vs Avg:                +1.98s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            81.5%
+  Cumulative Time:           235.56s (3m 55s)
+  Total Improvement:        7278.33 pixels
+  Avg Improvement/Gen:        65.57 pixels
+  Est. Remaining Time:   1m 23s
+================================================================================
+   112 |    50400 | -9.575520E+03 | -1.010167E+04
+
+================================================================================
+GENERATION 112 COMPLETE
+================================================================================
+  Best Distance:           10101.67 pixels
+  Average Distance:         9575.52 pixels
+  Median Distance:          9524.17 pixels
+  Min Distance:             9524.17 pixels
+  Standard Deviation:         88.31
+  Population Range:          577.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             4.83s
+  Average Gen Time:            2.17s
+  Time vs Avg:                +2.67s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            81.5%
+  Cumulative Time:           240.40s (4m 0s)
+  Total Improvement:        7278.33 pixels
+  Avg Improvement/Gen:        64.99 pixels
+  Est. Remaining Time:   1m 22s
+================================================================================
+   113 |    50850 | -9.608907E+03 | -1.010167E+04
+
+================================================================================
+GENERATION 113 COMPLETE
+================================================================================
+  Best Distance:           10101.67 pixels
+  Average Distance:         9608.91 pixels
+  Median Distance:          9542.50 pixels
+  Min Distance:             9524.17 pixels
+  Standard Deviation:        103.01
+  Population Range:          577.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             4.50s
+  Average Gen Time:            2.19s
+  Time vs Avg:                +2.31s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            81.5%
+  Cumulative Time:           244.89s (4m 4s)
+  Total Improvement:        7278.33 pixels
+  Avg Improvement/Gen:        64.41 pixels
+  Est. Remaining Time:   1m 20s
+================================================================================
+   114 |    51300 | -9.661463E+03 | -1.010167E+04
+
+================================================================================
+GENERATION 114 COMPLETE
+================================================================================
+  Best Distance:           10101.67 pixels
+  Average Distance:         9661.46 pixels
+  Median Distance:          9670.83 pixels
+  Min Distance:             9524.17 pixels
+  Standard Deviation:        104.74
+  Population Range:          577.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               5
+  Generation Time:             4.19s
+  Average Gen Time:            2.20s
+  Time vs Avg:                +1.99s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            81.5%
+  Cumulative Time:           249.09s (4m 9s)
+  Total Improvement:        7278.33 pixels
+  Avg Improvement/Gen:        63.85 pixels
+  Est. Remaining Time:   1m 19s
+================================================================================
+   115 |    51750 | -9.723328E+03 | -1.028500E+04
+
+================================================================================
+GENERATION 115 COMPLETE
+================================================================================
+  Best Distance:           10285.00 pixels
+  Average Distance:         9723.33 pixels
+  Median Distance:          9670.83 pixels
+  Min Distance:             9670.83 pixels
+  Standard Deviation:        102.78
+  Population Range:          614.17 pixels
+  Improvement:              +183.33 pixels
+  Improvement %:              +1.81%
+  Stagnation Count:               0
+  Generation Time:             4.50s
+  Average Gen Time:            2.22s
+  Time vs Avg:                +2.27s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            82.9%
+  Cumulative Time:           253.58s (4m 13s)
+  Total Improvement:        7461.67 pixels
+  Avg Improvement/Gen:        64.88 pixels
+  Est. Remaining Time:   1m 17s
+================================================================================
+   116 |    52200 | -9.764415E+03 | -1.028500E+04
+
+================================================================================
+GENERATION 116 COMPLETE
+================================================================================
+  Best Distance:           10285.00 pixels
+  Average Distance:         9764.41 pixels
+  Median Distance:          9698.33 pixels
+  Min Distance:             9670.83 pixels
+  Standard Deviation:        119.83
+  Population Range:          614.17 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             4.43s
+  Average Gen Time:            2.24s
+  Time vs Avg:                +2.19s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            82.9%
+  Cumulative Time:           258.01s (4m 18s)
+  Total Improvement:        7461.67 pixels
+  Avg Improvement/Gen:        64.32 pixels
+  Est. Remaining Time:   1m 16s
+================================================================================
+   117 |    52650 | -9.841557E+03 | -1.028500E+04
+
+================================================================================
+GENERATION 117 COMPLETE
+================================================================================
+  Best Distance:           10285.00 pixels
+  Average Distance:         9841.56 pixels
+  Median Distance:          9872.50 pixels
+  Min Distance:             9680.00 pixels
+  Standard Deviation:        123.41
+  Population Range:          605.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             4.60s
+  Average Gen Time:            2.26s
+  Time vs Avg:                +2.34s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            82.9%
+  Cumulative Time:           262.61s (4m 22s)
+  Total Improvement:        7461.67 pixels
+  Avg Improvement/Gen:        63.77 pixels
+  Est. Remaining Time:   1m 14s
+================================================================================
+   118 |    53100 | -9.932124E+03 | -1.031250E+04
+
+================================================================================
+GENERATION 118 COMPLETE
+================================================================================
+  Best Distance:           10312.50 pixels
+  Average Distance:         9932.12 pixels
+  Median Distance:          9872.50 pixels
+  Min Distance:             9872.50 pixels
+  Standard Deviation:        104.76
+  Population Range:          440.00 pixels
+  Improvement:               +27.50 pixels
+  Improvement %:              +0.27%
+  Stagnation Count:               0
+  Generation Time:             5.09s
+  Average Gen Time:            2.29s
+  Time vs Avg:                +2.80s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            83.2%
+  Cumulative Time:           267.70s (4m 27s)
+  Total Improvement:        7489.17 pixels
+  Avg Improvement/Gen:        63.47 pixels
+  Est. Remaining Time:   1m 13s
+================================================================================
+   119 |    53550 | -9.985881E+03 | -1.034000E+04
+
+================================================================================
+GENERATION 119 COMPLETE
+================================================================================
+  Best Distance:           10340.00 pixels
+  Average Distance:         9985.88 pixels
+  Median Distance:          9872.50 pixels
+  Min Distance:             9872.50 pixels
+  Standard Deviation:        121.59
+  Population Range:          467.50 pixels
+  Improvement:               +27.50 pixels
+  Improvement %:              +0.27%
+  Stagnation Count:               0
+  Generation Time:             4.70s
+  Average Gen Time:            2.31s
+  Time vs Avg:                +2.40s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            83.4%
+  Cumulative Time:           272.41s (4m 32s)
+  Total Improvement:        7516.67 pixels
+  Avg Improvement/Gen:        63.17 pixels
+  Est. Remaining Time:   1m 11s
+================================================================================
+   120 |    54000 | -1.007417E+04 | -1.114667E+04
+
+================================================================================
+GENERATION 120 COMPLETE
+================================================================================
+  Best Distance:           11146.67 pixels
+  Average Distance:        10074.17 pixels
+  Median Distance:         10101.67 pixels
+  Min Distance:             9872.50 pixels
+  Standard Deviation:        107.88
+  Population Range:         1274.17 pixels
+  Improvement:              +806.67 pixels
+  Improvement %:              +7.80%
+  Stagnation Count:               0
+  Generation Time:             4.72s
+  Average Gen Time:            2.33s
+  Time vs Avg:                +2.39s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:            89.9%
+  Cumulative Time:           277.13s (4m 37s)
+  Total Improvement:        8323.33 pixels
+  Avg Improvement/Gen:        69.36 pixels
+  Est. Remaining Time:   1m 9s
+================================================================================
+   121 |    54450 | -1.012210E+04 | -1.114667E+04
+
+================================================================================
+GENERATION 121 COMPLETE
+================================================================================
+  Best Distance:           11146.67 pixels
+  Average Distance:        10122.10 pixels
+  Median Distance:         10101.67 pixels
+  Min Distance:            10101.67 pixels
+  Standard Deviation:         89.49
+  Population Range:         1045.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             5.02s
+  Average Gen Time:            2.35s
+  Time vs Avg:                +2.67s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:            89.9%
+  Cumulative Time:           282.15s (4m 42s)
+  Total Improvement:        8323.33 pixels
+  Avg Improvement/Gen:        68.79 pixels
+  Est. Remaining Time:   1m 8s
+================================================================================
+   122 |    54900 | -1.014842E+04 | -1.246667E+04
+
+================================================================================
+GENERATION 122 COMPLETE
+================================================================================
+  Best Distance:           12466.67 pixels
+  Average Distance:        10148.42 pixels
+  Median Distance:         10101.67 pixels
+  Min Distance:            10101.67 pixels
+  Standard Deviation:        165.10
+  Population Range:         2365.00 pixels
+  Improvement:             +1320.00 pixels
+  Improvement %:             +11.84%
+  Stagnation Count:               0
+  Generation Time:             4.96s
+  Average Gen Time:            2.37s
+  Time vs Avg:                +2.59s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:           100.5%
+  Cumulative Time:           287.11s (4m 47s)
+  Total Improvement:        9643.33 pixels
+  Avg Improvement/Gen:        79.04 pixels
+  Est. Remaining Time:   1m 6s
+================================================================================
+   123 |    55350 | -1.019390E+04 | -1.246667E+04
+
+================================================================================
+GENERATION 123 COMPLETE
+================================================================================
+  Best Distance:           12466.67 pixels
+  Average Distance:        10193.90 pixels
+  Median Distance:         10101.67 pixels
+  Min Distance:            10101.67 pixels
+  Standard Deviation:        235.33
+  Population Range:         2365.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             4.77s
+  Average Gen Time:            2.39s
+  Time vs Avg:                +2.38s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:           100.5%
+  Cumulative Time:           291.88s (4m 51s)
+  Total Improvement:        9643.33 pixels
+  Avg Improvement/Gen:        78.40 pixels
+  Est. Remaining Time:   1m 4s
+================================================================================
+   124 |    55800 | -1.028465E+04 | -1.246667E+04
+
+================================================================================
+GENERATION 124 COMPLETE
+================================================================================
+  Best Distance:           12466.67 pixels
+  Average Distance:        10284.65 pixels
+  Median Distance:         10275.83 pixels
+  Min Distance:            10101.67 pixels
+  Standard Deviation:        315.81
+  Population Range:         2365.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             5.12s
+  Average Gen Time:            2.41s
+  Time vs Avg:                +2.71s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:           100.5%
+  Cumulative Time:           297.01s (4m 57s)
+  Total Improvement:        9643.33 pixels
+  Avg Improvement/Gen:        77.77 pixels
+  Est. Remaining Time:   1m 2s
+================================================================================
+   125 |    56250 | -1.041749E+04 | -1.246667E+04
+
+================================================================================
+GENERATION 125 COMPLETE
+================================================================================
+  Best Distance:           12466.67 pixels
+  Average Distance:        10417.49 pixels
+  Median Distance:         10285.00 pixels
+  Min Distance:            10120.00 pixels
+  Standard Deviation:        360.18
+  Population Range:         2346.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             5.06s
+  Average Gen Time:            2.44s
+  Time vs Avg:                +2.62s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:           100.5%
+  Cumulative Time:           302.07s (5m 2s)
+  Total Improvement:        9643.33 pixels
+  Avg Improvement/Gen:        77.15 pixels
+  Est. Remaining Time:   1m 0s
+================================================================================
+   126 |    56700 | -1.056462E+04 | -1.246667E+04
+
+================================================================================
+GENERATION 126 COMPLETE
+================================================================================
+  Best Distance:           12466.67 pixels
+  Average Distance:        10564.62 pixels
+  Median Distance:         10358.33 pixels
+  Min Distance:            10285.00 pixels
+  Standard Deviation:        470.75
+  Population Range:         2181.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             5.24s
+  Average Gen Time:            2.46s
+  Time vs Avg:                +2.78s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:           100.5%
+  Cumulative Time:           307.31s (5m 7s)
+  Total Improvement:        9643.33 pixels
+  Avg Improvement/Gen:        76.53 pixels
+  Est. Remaining Time:   0m 59s
+================================================================================
+   127 |    57150 | -1.084851E+04 | -1.255833E+04
+
+================================================================================
+GENERATION 127 COMPLETE
+================================================================================
+  Best Distance:           12558.33 pixels
+  Average Distance:        10848.51 pixels
+  Median Distance:         10615.00 pixels
+  Min Distance:            10358.33 pixels
+  Standard Deviation:        586.79
+  Population Range:         2200.00 pixels
+  Improvement:               +91.67 pixels
+  Improvement %:              +0.74%
+  Stagnation Count:               0
+  Generation Time:             5.49s
+  Average Gen Time:            2.48s
+  Time vs Avg:                +3.01s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           101.3%
+  Cumulative Time:           312.80s (5m 12s)
+  Total Improvement:        9735.00 pixels
+  Avg Improvement/Gen:        76.65 pixels
+  Est. Remaining Time:   0m 57s
+================================================================================
+   128 |    57600 | -1.119521E+04 | -1.255833E+04
+
+================================================================================
+GENERATION 128 COMPLETE
+================================================================================
+  Best Distance:           12558.33 pixels
+  Average Distance:        11195.21 pixels
+  Median Distance:         11013.75 pixels
+  Min Distance:            10532.50 pixels
+  Standard Deviation:        626.95
+  Population Range:         2025.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             5.30s
+  Average Gen Time:            2.50s
+  Time vs Avg:                +2.79s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           101.3%
+  Cumulative Time:           318.10s (5m 18s)
+  Total Improvement:        9735.00 pixels
+  Avg Improvement/Gen:        76.05 pixels
+  Est. Remaining Time:   0m 55s
+================================================================================
+   129 |    58050 | -1.161123E+04 | -1.255833E+04
+
+================================================================================
+GENERATION 129 COMPLETE
+================================================================================
+  Best Distance:           12558.33 pixels
+  Average Distance:        11611.23 pixels
+  Median Distance:         11238.33 pixels
+  Min Distance:            10972.50 pixels
+  Standard Deviation:        571.90
+  Population Range:         1585.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             5.49s
+  Average Gen Time:            2.53s
+  Time vs Avg:                +2.96s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           101.3%
+  Cumulative Time:           323.59s (5m 23s)
+  Total Improvement:        9735.00 pixels
+  Avg Improvement/Gen:        75.47 pixels
+  Est. Remaining Time:   0m 53s
+================================================================================
+   130 |    58500 | -1.202166E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 130 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        12021.66 pixels
+  Median Distance:         12026.67 pixels
+  Min Distance:            11165.00 pixels
+  Standard Deviation:        654.05
+  Population Range:        10844.17 pixels
+  Improvement:             +9450.83 pixels
+  Improvement %:             +75.26%
+  Stagnation Count:               0
+  Generation Time:             5.73s
+  Average Gen Time:            2.55s
+  Time vs Avg:                +3.18s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           177.5%
+  Cumulative Time:           329.33s (5m 29s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       147.58 pixels
+  Est. Remaining Time:   0m 51s
+================================================================================
+   131 |    58950 | -1.237054E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 131 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        12370.54 pixels
+  Median Distance:         12466.67 pixels
+  Min Distance:            12026.67 pixels
+  Standard Deviation:        496.23
+  Population Range:         9982.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               1
+  Generation Time:             5.73s
+  Average Gen Time:            2.58s
+  Time vs Avg:                +3.15s
+  Convergence Status:    ✓ MODERATE
+  Level Completion:           177.5%
+  Cumulative Time:           335.06s (5m 35s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       146.46 pixels
+  Est. Remaining Time:   0m 48s
+================================================================================
+   132 |    59400 | -1.257779E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 132 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        12577.79 pixels
+  Median Distance:         12466.67 pixels
+  Min Distance:            12466.67 pixels
+  Standard Deviation:        999.89
+  Population Range:         9542.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               2
+  Generation Time:             5.91s
+  Average Gen Time:            2.60s
+  Time vs Avg:                +3.31s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           177.5%
+  Cumulative Time:           340.97s (5m 40s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       145.35 pixels
+  Est. Remaining Time:   0m 46s
+================================================================================
+   133 |    59850 | -1.260256E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 133 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        12602.56 pixels
+  Median Distance:         12466.67 pixels
+  Min Distance:            12466.67 pixels
+  Standard Deviation:       1093.73
+  Population Range:         9542.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               3
+  Generation Time:             5.93s
+  Average Gen Time:            2.63s
+  Time vs Avg:                +3.30s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           177.5%
+  Cumulative Time:           346.89s (5m 46s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       144.25 pixels
+  Est. Remaining Time:   0m 44s
+================================================================================
+   134 |    60300 | -1.267202E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 134 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        12672.02 pixels
+  Median Distance:         12466.67 pixels
+  Min Distance:            12466.67 pixels
+  Standard Deviation:       1334.15
+  Population Range:         9542.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               4
+  Generation Time:             5.92s
+  Average Gen Time:            2.65s
+  Time vs Avg:                +3.27s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           177.5%
+  Cumulative Time:           352.81s (5m 52s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       143.18 pixels
+  Est. Remaining Time:   0m 42s
+================================================================================
+   135 |    60750 | -1.280966E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 135 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        12809.66 pixels
+  Median Distance:         12475.83 pixels
+  Min Distance:            12466.67 pixels
+  Standard Deviation:       1708.59
+  Population Range:         9542.50 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               5
+  Generation Time:             6.35s
+  Average Gen Time:            2.68s
+  Time vs Avg:                +3.67s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           177.5%
+  Cumulative Time:           359.16s (5m 59s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       142.12 pixels
+  Est. Remaining Time:   0m 40s
+================================================================================
+   136 |    61200 | -1.320623E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 136 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        13206.23 pixels
+  Median Distance:         12503.33 pixels
+  Min Distance:            12475.83 pixels
+  Standard Deviation:       2476.55
+  Population Range:         9533.33 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               6
+  Generation Time:             6.61s
+  Average Gen Time:            2.71s
+  Time vs Avg:                +3.90s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           177.5%
+  Cumulative Time:           365.77s (6m 5s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       141.07 pixels
+  Est. Remaining Time:   0m 37s
+================================================================================
+   137 |    61650 | -1.379514E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 137 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        13795.14 pixels
+  Median Distance:         12558.33 pixels
+  Min Distance:            12494.17 pixels
+  Standard Deviation:       3221.89
+  Population Range:         9515.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               7
+  Generation Time:             6.61s
+  Average Gen Time:            2.74s
+  Time vs Avg:                +3.88s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           177.5%
+  Cumulative Time:           372.39s (6m 12s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       140.04 pixels
+  Est. Remaining Time:   0m 35s
+================================================================================
+   138 |    62100 | -1.475935E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 138 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        14759.35 pixels
+  Median Distance:         12558.33 pixels
+  Min Distance:            12512.50 pixels
+  Standard Deviation:       3999.58
+  Population Range:         9496.67 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               8
+  Generation Time:             6.91s
+  Average Gen Time:            2.77s
+  Time vs Avg:                +4.14s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           177.5%
+  Cumulative Time:           379.30s (6m 19s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       139.03 pixels
+  Est. Remaining Time:   0m 33s
+================================================================================
+   139 |    62550 | -1.690572E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 139 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        16905.72 pixels
+  Median Distance:         12558.33 pixels
+  Min Distance:            12558.33 pixels
+  Standard Deviation:       4710.27
+  Population Range:         9450.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:               9
+  Generation Time:             7.68s
+  Average Gen Time:            2.80s
+  Time vs Avg:                +4.87s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           177.5%
+  Cumulative Time:           386.98s (6m 26s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       138.03 pixels
+  Est. Remaining Time:   0m 30s
+================================================================================
+   140 |    63000 | -1.997199E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 140 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        19971.99 pixels
+  Median Distance:         22009.17 pixels
+  Min Distance:            12558.33 pixels
+  Standard Deviation:       3886.25
+  Population Range:         9450.83 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              10
+  Generation Time:             8.65s
+  Average Gen Time:            2.85s
+  Time vs Avg:                +5.80s
+  Convergence Status:     LOW (Still exploring)
+  Level Completion:           177.5%
+  Cumulative Time:           395.63s (6m 35s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       137.04 pixels
+  Est. Remaining Time:   0m 28s
+================================================================================
+   141 |    63450 | -2.200917E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 141 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        22009.17 pixels
+  Median Distance:         22009.17 pixels
+  Min Distance:            22009.17 pixels
+  Standard Deviation:          0.00
+  Population Range:            0.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              11
+  Generation Time:             9.42s
+  Average Gen Time:            2.89s
+  Time vs Avg:                +6.52s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:           177.5%
+  Cumulative Time:           405.04s (6m 45s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       136.07 pixels
+  Est. Remaining Time:   0m 26s
+================================================================================
+   142 |    63900 | -2.200917E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 142 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        22009.17 pixels
+  Median Distance:         22009.17 pixels
+  Min Distance:            22009.17 pixels
+  Standard Deviation:          0.00
+  Population Range:            0.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              12
+  Generation Time:             9.78s
+  Average Gen Time:            2.94s
+  Time vs Avg:                +6.84s
+  Convergence Status:     HIGH (Population converging)
+  Level Completion:           177.5%
+  Cumulative Time:           414.82s (6m 54s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       135.11 pixels
+  Est. Remaining Time:   0m 23s
+================================================================================
+   143 |    64350 | -2.200917E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 143 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        22009.17 pixels
+  Median Distance:         22009.17 pixels
+  Min Distance:            22009.17 pixels
+  Standard Deviation:          0.00
+  Population Range:            0.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              13
+  Generation Time:             9.92s
+  Average Gen Time:            2.99s
+  Time vs Avg:                +6.93s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:           177.5%
+  Cumulative Time:           424.74s (7m 4s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       134.17 pixels
+  Est. Remaining Time:   0m 20s
+================================================================================
+   144 |    64800 | -2.200917E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 144 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        22009.17 pixels
+  Median Distance:         22009.17 pixels
+  Min Distance:            22009.17 pixels
+  Standard Deviation:          0.00
+  Population Range:            0.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              14
+  Generation Time:             9.82s
+  Average Gen Time:            3.04s
+  Time vs Avg:                +6.78s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:           177.5%
+  Cumulative Time:           434.56s (7m 14s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       133.23 pixels
+  Est. Remaining Time:   0m 18s
+================================================================================
+   145 |    65250 | -2.200917E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 145 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        22009.17 pixels
+  Median Distance:         22009.17 pixels
+  Min Distance:            22009.17 pixels
+  Standard Deviation:          0.00
+  Population Range:            0.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              15
+  Generation Time:            10.35s
+  Average Gen Time:            3.09s
+  Time vs Avg:                +7.26s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:           177.5%
+  Cumulative Time:           444.91s (7m 24s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       132.32 pixels
+  Est. Remaining Time:   0m 15s
+================================================================================
+   146 |    65700 | -2.200917E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 146 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        22009.17 pixels
+  Median Distance:         22009.17 pixels
+  Min Distance:            22009.17 pixels
+  Standard Deviation:          0.00
+  Population Range:            0.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              16
+  Generation Time:             9.72s
+  Average Gen Time:            3.14s
+  Time vs Avg:                +6.59s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:           177.5%
+  Cumulative Time:           454.63s (7m 34s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       131.41 pixels
+  Est. Remaining Time:   0m 12s
+================================================================================
+   147 |    66150 | -2.200917E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 147 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        22009.17 pixels
+  Median Distance:         22009.17 pixels
+  Min Distance:            22009.17 pixels
+  Standard Deviation:          0.00
+  Population Range:            0.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              17
+  Generation Time:             9.69s
+  Average Gen Time:            3.18s
+  Time vs Avg:                +6.51s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:           177.5%
+  Cumulative Time:           464.32s (7m 44s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       130.52 pixels
+  Est. Remaining Time:   0m 9s
+================================================================================
+   148 |    66600 | -2.200917E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 148 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        22009.17 pixels
+  Median Distance:         22009.17 pixels
+  Min Distance:            22009.17 pixels
+  Standard Deviation:          0.00
+  Population Range:            0.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              18
+  Generation Time:             9.39s
+  Average Gen Time:            3.22s
+  Time vs Avg:                +6.17s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:           177.5%
+  Cumulative Time:           473.71s (7m 53s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       129.63 pixels
+  Est. Remaining Time:   0m 6s
+================================================================================
+   149 |    67050 | -2.200917E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 149 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        22009.17 pixels
+  Median Distance:         22009.17 pixels
+  Min Distance:            22009.17 pixels
+  Standard Deviation:          0.00
+  Population Range:            0.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              19
+  Generation Time:             9.88s
+  Average Gen Time:            3.27s
+  Time vs Avg:                +6.62s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:           177.5%
+  Cumulative Time:           483.60s (8m 3s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       128.76 pixels
+  Est. Remaining Time:   0m 3s
+================================================================================
+   150 |    67500 | -2.200917E+04 | -2.200917E+04
+
+================================================================================
+GENERATION 150 COMPLETE
+================================================================================
+  Best Distance:           22009.17 pixels
+  Average Distance:        22009.17 pixels
+  Median Distance:         22009.17 pixels
+  Min Distance:            22009.17 pixels
+  Standard Deviation:          0.00
+  Population Range:            0.00 pixels
+  Improvement:                +0.00 pixels
+  Improvement %:              +0.00%
+  Stagnation Count:              20
+  Generation Time:             9.70s
+  Average Gen Time:            3.31s
+  Time vs Avg:                +6.39s
+  Convergence Status:    ️  HIGH (Population converging)
+  Level Completion:           177.5%
+  Cumulative Time:           493.30s (8m 13s)
+  Total Improvement:       19185.83 pixels
+  Avg Improvement/Gen:       127.91 pixels
+  Est. Remaining Time:   0m 0s
+================================================================================
+
+ INITIAL POPULATION ANALYSIS:
+────────────────────────────────────────────────────────────────────────────────
+  Best Individual:             2823.33 pixels
+  Average Fitness:             930.13 pixels
+  Median Fitness:              825.00 pixels
+  Worst Individual:            577.50 pixels
+  Population Diversity (σ):    376.71
+  Fitness Range:               2245.83 pixels
+  Initial Success Rate:        22.8%
+────────────────────────────────────────────────────────────────────────────────
+
+ Evaluating final population for jump counts...
+
+╔==============================================================================╗
+║                         OPTIMIZATION COMPLETE                                ║
+╚==============================================================================╝
+
+️  TIMING ANALYSIS:
+────────────────────────────────────────────────────────────────────────────────
+  Total Optimization Time:     8m 13s (493.30s)
+  Average Time per Generation: 3.311s
+  Median Time per Generation:  2.533s
+  Fastest Generation:          0.555s
+  Slowest Generation:          10.347s
+  Std Dev of Gen Times:        2.375s
+  Total Evaluations:           67,500
+  Evaluations per Second:      136.83
+────────────────────────────────────────────────────────────────────────────────
+
+ CONVERGENCE ANALYSIS:
+────────────────────────────────────────────────────────────────────────────────
+  Initial Best:                2823.33 pixels
+  Final Best:                  22009.17 pixels
+  Total Improvement:           19185.83 pixels
+  Improvement Percentage:      679.55%
+  Average Improvement per Gen: 127.91 px
+  Generations with improvement: 29/149
+    - Significant (>100px):    17
+    - Moderate (10-100px):     10
+    - Small (0-10px):          2
+    - No improvement:          120
+  Longest Stagnation Period:   20 generations
+────────────────────────────────────────────────────────────────────────────────
+
+ DIVERSITY & CONVERGENCE:
+────────────────────────────────────────────────────────────────────────────────
+  Initial Diversity (σ):       376.71
+  Final Diversity (σ):         0.00
+  Diversity Reduction:         376.71 (100.0%)
+  Average Diversity:           344.28
+  Minimum Diversity Reached:   0.00
+  Convergence Status:            VERY HIGH - Population may be stuck
+────────────────────────────────────────────────────────────────────────────────
+
+ BEST SOLUTIONS:
+────────────────────────────────────────────────────────────────────────────────
+
+  #1 FURTHEST DISTANCE:
+    Distance:                  22009.17 pixels
+    Jumps Used:                48.0
+    Efficiency:                449.17 px/jump
+    Level Completion:          177.5%
+    Genome Sample:             [11.74431592  1.14602224 15.48443935  0.5473941  28.27578056  1.38867261] ...
+
+  #2 MOST EFFICIENT (Fewest Jumps):
+    Distance:                  22009.17 pixels
+    Jumps Used:                44.0
+    Efficiency:                489.09 px/jump
+    Level Completion:          177.5%
+
+  #3 BEST EFFICIENCY RATIO:
+    Distance:                  22009.17 pixels
+    Jumps Used:                44.0
+    Efficiency:                489.09 px/jump
+    Level Completion:          177.5%
+────────────────────────────────────────────────────────────────────────────────
+
+ FINAL POPULATION STATISTICS:
+────────────────────────────────────────────────────────────────────────────────
+  Population Size:             450
+  Distance Statistics:
+    Mean:                      22009.17 pixels
+    Median:                    22009.17 pixels
+    Std Deviation:             0.00 pixels
+    Min:                       22009.17 pixels
+    Max:                       22009.17 pixels
+    Range:                     0.00 pixels
+    25th Percentile:           22009.17 pixels
+    75th Percentile:           22009.17 pixels
+
+  Jump Statistics:
+    Mean:                      47.49
+    Median:                    48.00
+    Min:                       44.00
+    Max:                       51.00
+
+  Efficiency Statistics:
+    Mean:                      454.20 px/jump
+    Median:                    449.17 px/jump
+    Best:                      489.09 px/jump
+────────────────────────────────────────────────────────────────────────────────
+
+ PERFORMANCE BREAKDOWN:
+────────────────────────────────────────────────────────────────────────────────
+  Victories (>11000px):        450 (100.0%)
+  Near Victory (9000-11000):   0 (0.0%)
+  Mid-level (5000-9000):       0 (0.0%)
+  Early Deaths (<5000):        0 (0.0%)
+────────────────────────────────────────────────────────────────────────────────
+
+================================================================================
+
+ Run best solution (22009px) visualization? (y/n): y
+
+  Running simulation...
+
+
+VICTORY! Level Complete!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+======================================================================
+GEOMETRY DASH - ALGORITHM: HC
+======================================================================
+Population Size: 1
+Generations: 20000
+Max Jumps: 80
+======================================================================
+
+Starting optimization...
+
+
+======================================================================
+OPTIMIZATION COMPLETE
+======================================================================
+Total Time: 0m 39s
+======================================================================
+
+======================================================================
+FINAL STATISTICS
+======================================================================
+Best Distance: 1824 pixels
+Best Jumps: 4.0
+Best Efficiency: 364.8 px/jump
+
+Improvement: 981 pixels
+======================================================================
+
+Generating graphs...
+
+Best Genome:  [1.25094745e+01 3.47105695e-02 3.74808185e+01 1.24986736e-01
+ 3.02040635e+01 1.25356263e+00 2.45049349e+01 1.92163495e-01
+ 3.83696036e+01 9.19493906e-01 2.95941699e+01 1.48506434e+00
+ 1.92834445e+01 5.97490155e-01 2.42608231e+01 8.51386597e-01
+ 3.92972711e+01 1.31428119e+00 2.72334480e+01 7.75221164e-01
+ 1.22030050e+01 9.16805784e-01 3.84854884e+01 3.82205245e-01
+ 2.17434832e+01 7.02165902e-01 1.03420186e+01 1.36216470e+00
+ 3.49229182e+01 6.66966242e-02 3.03663592e+01 1.82458836e-01
+ 4.20960643e+00 1.28536667e+00 3.57412545e+01 8.86308053e-01
+ 1.32836396e+01 9.10104030e-01 3.43098645e+01 3.70163779e-01
+ 1.45025542e+01 5.69434075e-01 3.27496157e+00 1.91084502e-02
+ 3.91061587e+01 1.45808145e+00 2.91026158e+01 1.31431798e+00
+ 3.41162858e+00 1.13475928e+00 1.71253117e+01 1.08253305e-01
+ 2.21285047e+01 6.86223563e-01 5.54578885e+00 1.96276559e-01
+ 9.71497416e+00 2.51462505e-01 5.63305700e+00 1.07827245e-01
+ 3.12772861e+01 9.71932232e-01 3.64836302e+01 2.06067309e-01
+ 2.21545122e+01 1.49835610e+00 3.71735340e+01 3.92495750e-01
+ 2.14089887e+01 4.16471993e-01 2.66150496e+01 1.20266815e+00
+ 3.43057259e+01 2.77890250e-01 2.02072389e+01 8.85121614e-01
+ 1.35458240e+00 1.37356698e+00 2.80445523e+01 3.91836924e-01
+ 7.64053587e-01 6.28929695e-01 3.76596728e+01 6.76918464e-03
+ 2.61117794e+01 9.30370334e-01 1.31239874e+01 6.61726456e-01
+ 3.86530966e+01 1.17693402e+00 1.72289240e+01 5.99098895e-01
+ 1.79970077e+01 5.36577130e-01 2.56141232e+01 3.11748501e-01
+ 3.14970375e+01 1.22727725e+00 3.73980177e+01 1.40703315e+00
+ 1.40348917e+01 6.58925209e-02 2.15498105e+01 9.15911005e-01
+ 1.40216147e+01 1.46993528e+00 9.88761594e+00 4.21988221e-01
+ 3.36771691e+01 1.34049698e+00 2.96527677e+01 8.19382089e-01
+ 8.83262522e+00 1.44734252e+00 4.22937430e+00 5.69566457e-01
+ 2.73781031e+01 3.46187596e-01 2.71628556e+01 6.03052171e-01
+ 2.43443183e+01 6.32811825e-01 2.29886138e+01 1.35594278e+00
+ 2.74724809e+01 8.55880256e-01 1.37445078e+01 7.43427781e-01
+ 2.27470424e+01 1.89729805e-01 3.48673447e+01 9.17343664e-01
+ 8.39603245e+00 1.44278003e-01 1.75444393e+01 7.62190408e-01
+ 3.37124920e+00 9.52211603e-01 1.30710301e+01 6.35850379e-01
+ 1.88922687e+01 8.23526143e-01 2.71712015e+01 1.01275077e+00
+ 1.28834197e+01 6.09173140e-01 4.99375185e-01 7.74614753e-01
+ 1.99824205e+01 5.32018564e-02 3.69661685e+01 1.12304151e-01
+ 3.03076506e+01 8.45676140e-01 9.56581474e+00 1.86456365e-01
+ 2.96245394e+01 5.87519861e-01 2.90883098e+01 4.22271696e-02]
+
+Run simulation? (y/n):
+
+
+
+
+
+
+
